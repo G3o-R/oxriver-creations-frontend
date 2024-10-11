@@ -5,10 +5,11 @@ export const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 24px 24px 24px 24px;
     
     @media screen and (min-width: 768px) {
+        background-color: #f9f9f9;
         height: 540px;
     }
     `;
@@ -21,11 +22,11 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     background-color: white;
-
+    
     @media screen and (min-width: 768px) {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         flex-direction: row;
         padding: 20px;
     }
