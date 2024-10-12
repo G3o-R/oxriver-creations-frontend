@@ -6,7 +6,7 @@ export const FooterWrapper = styled.footer`
     display: flex;
     max-width: 100vw;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 4rem;
 `;
 
 export const FooterContainer = styled.div`
@@ -48,7 +48,7 @@ export const InfoContainer = styled.div`
         margin-bottom: 8px;
         
         span {
-            color: #b3b3b3; /* Light color for the contact details */
+            color: #b3b3b3;
         }
     }
 `;

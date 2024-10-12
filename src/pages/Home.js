@@ -7,10 +7,12 @@ import { HomePage } from "../styles/HomeStyles";
 export default function Home(){
     return(
     <HomePage>
-        {/* hero section */}
-        {/* <HeroSection /> */}
+        <div className="hero-section-placeholder" style={{
+            backgroundColor: "white",
+            width: "100%",
+            height: "70vh"
+        }}></div>
         {/* Products: 3d prints, aprons, etc */}
-        {/* About Us */}
         <About />
         <Footer />
     </HomePage>
