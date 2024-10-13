@@ -6,10 +6,14 @@ import {
     ContentContainer
  } from "../styles/ProductsSectionStyles";
 
+import ProductCard from "./ProductCard";
+
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css"
 
 export default function ProductsSection({productsArray}){
+
+const productsToDisplay = productsArray.map((product) => (<ProductCard productData={product}/>))
     return(
         <Wrapper>
             <Container>
@@ -19,6 +23,7 @@ export default function ProductsSection({productsArray}){
                 <ContentWrapper>
                     <ContentContainer>
                         {/* an array of products would go here */}
+                        {productsToDisplay}
                     </ContentContainer>
                 </ContentWrapper>
             </Container>
