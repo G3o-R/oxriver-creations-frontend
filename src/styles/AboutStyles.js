@@ -13,7 +13,9 @@ export  const HeaderContainer = styled.div`
 
     h1{
         color: #f9f9f9;
+        font-size: 2rem;
         text-decoration: underline;
+        margin-bottom: 20px;
     }
 `;
 
