@@ -7,14 +7,14 @@ import ProductsSection from "../components/ProductsSection";
 
 
 export default function Home(){
-    const [productsArray, setProductsArray] = useState([])
+    const [categoriesArray, setCategoriesArray] = useState([])
     const [bestSellersArray, setBestSellersArray] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:3001/products")
             .then((res) => res.json())
             .then((data) => {
-                setProductsArray(data.all_products)
+                setCategoriesArray(data.categories)
                 setBestSellersArray(data.best_sellers)
             });
     }, []);
@@ -35,7 +35,7 @@ export default function Home(){
         }}></div>
         {/* Products: 3d prints, aprons, etc */}
         <ProductsSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
-        <ProductsSection productsArray={productsArray} title="Categories"/>
+        <ProductsSection productsArray={categoriesArray} title="CategoriesArray"/>
         <About />
         <Footer />
     </HomePage>

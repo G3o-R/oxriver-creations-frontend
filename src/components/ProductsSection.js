@@ -6,7 +6,7 @@ import {
     ContentContainer
  } from "../styles/ProductsSectionStyles";
 
-import ProductCard from "./ProductCard";
+import CategoriesCard from "./CategoriesCard";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { useRef, useState, useEffect } from "react";
@@ -49,7 +49,7 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     {type === "BestSellers" ? (
         <BestSellerCard image={product.image} description={product.description} />
     ) : (
-        <ProductCard image={product.image} />
+        <CategoriesCard image={product.image} />
     )}
   </SwiperSlide>
 ));

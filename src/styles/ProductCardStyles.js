@@ -73,7 +73,6 @@ export const OverlayContainer = styled.div`
     height: 100%;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 `;
 
@@ -92,8 +91,7 @@ export const CategoryTitle = styled.div`
 export const MenuWrapper = styled.div`
     height: 100%;
     width: 100%;
-    /* background-color: #fbfbfb; */
-    padding: 5px;
+    bottom: 0;
 
 `
 
@@ -109,4 +107,5 @@ export const MenuOption = styled.div`
     width: 100%;
     background-color: black;
     color: white;
+    text-align: center;
 `

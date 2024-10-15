@@ -22,7 +22,7 @@ import {
 // instead of products section this will be the categories secion
 
 
-export default function ProductCard({image}){
+export default function CategoriesCardCard({image}){
 
     const [isActive, setIsActive] = useState(false)
 
