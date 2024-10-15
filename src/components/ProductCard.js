@@ -2,7 +2,9 @@ import {
     CardContainer, 
     CardWrapper, 
     ImageContainer, 
-    ImageWrapper 
+    ImageWrapper, 
+    TextContainer, 
+    TextWrapper
 } from "../styles/ProductCardStyles";
 
 // fix/remove the on hover effect for the images
@@ -12,8 +14,8 @@ import {
 // instead of products section this will be the categories secion
 
 
-export default function ProductCard({productData}){
-    const {image} = productData
+export default function ProductCard({image}){
+
     return(
         <CardWrapper>
             <CardContainer>

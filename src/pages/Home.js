@@ -8,14 +8,23 @@ import ProductsSection from "../components/ProductsSection";
 
 export default function Home(){
     const [productsArray, setProductsArray] = useState([])
+    const [bestSellersArray, setBestSellersArray] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:3001/products")
             .then((res) => res.json())
             .then((data) => {
-                setProductsArray(data)
+                setProductsArray(data.all_products)
+                setBestSellersArray(data.best_sellers)
             });
     }, []);
+
+
+
+    const settingsBestSeller = {
+        numSwipers: 2,
+        type: "BestSellers"
+    }
 
     return(
     <HomePage>
@@ -25,7 +34,8 @@ export default function Home(){
             height: "70vh"
         }}></div>
         {/* Products: 3d prints, aprons, etc */}
-        <ProductsSection productsArray={productsArray}/>
+        <ProductsSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
+        {/* <ProductsSection productsArray={productsArray} title="Categories"/> */}
         <About />
         <Footer />
     </HomePage>
