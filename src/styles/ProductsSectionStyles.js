@@ -41,9 +41,6 @@ export const ContentContainer = styled.div`
     overflow: hidden;
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* gap: 15px; */
 
     .swiper {
         width: 100%;

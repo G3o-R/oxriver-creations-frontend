@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { 
     CardContainer, 
     CardWrapper, 
+    CategoryTitle, 
     ImageContainer, 
     ImageWrapper, 
+    MenuContainer, 
+    MenuOption, 
+    MenuWrapper, 
+    OverlayContainer, 
+    OverlayWrapper, 
     TextContainer, 
-    TextWrapper
+    TextWrapper,
+    TitleWrapper
 } from "../styles/ProductCardStyles";
 
 // fix/remove the on hover effect for the images
@@ -16,14 +24,35 @@ import {
 
 export default function ProductCard({image}){
 
+    const [isActive, setIsActive] = useState(false)
+
     return(
-        <CardWrapper>
+        <CardWrapper 
+        onMouseEnter={()=> setIsActive(true)}
+        onMouseLeave={() => setIsActive(false)}
+        >
             <CardContainer>
                 <ImageWrapper>
                     <ImageContainer>
                         <img src={image} alt="Product Image"/>
                     </ImageContainer>
                 </ImageWrapper>
+                <OverlayWrapper className={isActive ? "active" : "hidden"}>
+                {/* <OverlayWrapper className={"active"}> */}
+                    <OverlayContainer>
+                        <TitleWrapper>
+                            <CategoryTitle>Title</CategoryTitle>
+                        </TitleWrapper>
+                        <MenuWrapper>
+                            <MenuContainer>
+                                <MenuOption>1</MenuOption>
+                                <MenuOption>2</MenuOption>
+                                <MenuOption>3</MenuOption>
+                                <MenuOption>4</MenuOption>
+                            </MenuContainer>
+                        </MenuWrapper>
+                    </OverlayContainer>
+                </OverlayWrapper>
             </CardContainer>
         </CardWrapper>
     )    

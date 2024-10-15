@@ -3,19 +3,18 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    padding: 20px;
-    margin: 15px 5px;  /* Extra margin for better spacing */
+    padding: 10px;
+    margin: 15px 5px;
     background-color: #fbfbfb;
     border-radius: 24px;
     transition: box-shadow 0.3s ease;
 
     &:hover {
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
 
     @media screen and (min-width: 1080px) {
         background-color: #e0e0e0;
-        /* height: 540px; */
     }
 `;
 
@@ -25,7 +24,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 18px;
     background-color: #fbfbfb;
     transition: transform 0.3s ease;
 
@@ -54,6 +53,10 @@ export const ImageContainer = styled.div`
     overflow: hidden;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    
+    @media screen and (min-width: 650px) {
+        aspect-ratio: 1/1;
+    }
 
     img {
         width: 100%;
@@ -64,12 +67,8 @@ export const ImageContainer = styled.div`
     }
 
     &:hover img {
-        transform: scale(1.05); /* Image zoom effect on hover */
+        transform: scale(1.05);
     }
-    /* maybe I can fix the height difference here */
-    /* @media screen and (min-width: 650){
-        
-    } */
 
     @media screen and (min-width: 1080px) {
         border-radius: 12px 0 0 12px;
@@ -82,7 +81,7 @@ export const TextWrapper = styled.div`
 
     @media screen and (min-width: 1080px) {
         width: 50%;
-        padding: 0px 30px 0px 30px;
+        padding: 0px 10px 0px 20px;
     }
 `;
 

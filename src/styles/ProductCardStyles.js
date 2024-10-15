@@ -5,7 +5,6 @@ export const CardWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* max-width: 300px; */
     width: 100%;
     aspect-ratio: 3/5;
     background-color: white;
@@ -14,10 +13,16 @@ export const CardWrapper = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
-`;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover{
+        background-color: #575a65;
+    }
+    `;
 
 export const CardContainer = styled.div`
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -39,19 +44,69 @@ export const ImageContainer = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-            transform: scale(1.05);
-        }
     }
 `;
 
+export const OverlayWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(10, 10, 10, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-export const TextWrapper = styled.div`
-
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
 `;
 
-export const TextContainer = styled.div`
+export const OverlayContainer = styled.div`
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
 
+export const TitleWrapper = styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+`;
+
+export const CategoryTitle = styled.div`
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+`;
+
+export const MenuWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    /* background-color: #fbfbfb; */
+    padding: 5px;
+
+`
+
+export const MenuContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+`;
+
+export const MenuOption = styled.div`
+    height: 100%;
+    height: 9rem;
+    width: 100%;
+    background-color: black;
+    color: white;
 `

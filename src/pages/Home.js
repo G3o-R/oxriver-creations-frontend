@@ -35,7 +35,7 @@ export default function Home(){
         }}></div>
         {/* Products: 3d prints, aprons, etc */}
         <ProductsSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
-        {/* <ProductsSection productsArray={productsArray} title="Categories"/> */}
+        <ProductsSection productsArray={productsArray} title="Categories"/>
         <About />
         <Footer />
     </HomePage>
