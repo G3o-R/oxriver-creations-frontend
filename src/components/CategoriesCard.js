@@ -8,10 +8,12 @@ import {
     MenuContainer, 
     MenuOption, 
     MenuWrapper, 
+    OptionOverlay, 
     OverlayContainer, 
     OverlayWrapper, 
     TextContainer, 
     TextWrapper,
+    TitleContainer,
     TitleWrapper
 } from "../styles/CategoriesCardStyles";
 
@@ -34,12 +36,17 @@ export default function CategoriesCard({categoryData}){
                 <OverlayWrapper className={"active"}>
                     <OverlayContainer>
                         <TitleWrapper>
-                            <CategoryTitle>{category_name}</CategoryTitle>
+                            <TitleContainer>
+                                <CategoryTitle>{category_name}</CategoryTitle>
+                            </TitleContainer>
                         </TitleWrapper>
                         <MenuWrapper>
                             <MenuContainer>
                                 {products.map((productOption) => 
-                                    (<MenuOption><img src={productOption.image}/></MenuOption>))}
+                                    (<MenuOption>
+                                        <img src={productOption.image}/>
+                                        <OptionOverlay></OptionOverlay>
+                                    </MenuOption>))}
                             </MenuContainer>
                         </MenuWrapper>
                     </OverlayContainer>

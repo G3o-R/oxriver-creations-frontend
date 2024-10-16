@@ -81,32 +81,42 @@ export const OverlayContainer = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     width: 100%;
     padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    `;
+
+export const TitleContainer = styled.div`
+    width: 100%;
+    height: 3rem;
+    padding-top: 1rem;
+    background-color: rgba(10, 10, 10, 0.4);
 `;
 
 export const CategoryTitle = styled.div`
     color: white;
+    height: 2rem;
     font-size: 1.5rem;
     text-align: center;
 `;
 
 export const MenuWrapper = styled.div`
     width: 100%;
-    /* margin-top: auto; */
 `;
 
 export const MenuContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    border-radius: 0px 0px 6px 6px;
+    overflow:hidden;
+    /* gap: 5px; */
 `;
 
-export const MenuOption = styled.a`
+export const MenuOption = styled.div`
     height: 9rem;
     width: 100%;
     background-color: black;
@@ -115,10 +125,26 @@ export const MenuOption = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    &:hover > div {
+        opacity: 1;
+        visibility: visible;
+        box-shadow: inset 0 0 0 4px black;
+    }
+    `;
+
+export const OptionOverlay = styled.div`
+    width: 100%;
+    /* box-shadow: inset 0 0 0 4px #575a65; */
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 `;
