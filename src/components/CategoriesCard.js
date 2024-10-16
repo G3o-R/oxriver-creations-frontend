@@ -32,8 +32,8 @@ export default function CategoriesCard({categoryData}){
                         <img src={image} alt="Product Image"/>
                     </ImageContainer>
                 </ImageWrapper>
-                {/* <OverlayWrapper className={isActive ? "active" : "hidden"}> */}
-                <OverlayWrapper className={"active"}>
+                <OverlayWrapper className={isActive ? "active" : "hidden"}>
+                {/* <OverlayWrapper className={"active"}> */}
                     <OverlayContainer>
                         <TitleWrapper>
                             <TitleContainer>
