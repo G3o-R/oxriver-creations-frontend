@@ -13,17 +13,10 @@ import {
     TextContainer, 
     TextWrapper,
     TitleWrapper
-} from "../styles/ProductCardStyles";
+} from "../styles/CategoriesCardStyles";
 
-// fix/remove the on hover effect for the images
-// onHover a "menu" should come up from the botoom of the
-// card and cover half of the image, and display four smaller square images of 
-// different related products
-// instead of products section this will be the categories secion
-
-
-export default function CategoriesCardCard({image}){
-
+export default function CategoriesCard({categoryData}){
+    const {image, category_name, products} = categoryData
     const [isActive, setIsActive] = useState(false)
 
     return(
@@ -37,18 +30,16 @@ export default function CategoriesCardCard({image}){
                         <img src={image} alt="Product Image"/>
                     </ImageContainer>
                 </ImageWrapper>
-                <OverlayWrapper className={isActive ? "active" : "hidden"}>
-                {/* <OverlayWrapper className={"active"}> */}
+                {/* <OverlayWrapper className={isActive ? "active" : "hidden"}> */}
+                <OverlayWrapper className={"active"}>
                     <OverlayContainer>
                         <TitleWrapper>
-                            <CategoryTitle>Title</CategoryTitle>
+                            <CategoryTitle>{category_name}</CategoryTitle>
                         </TitleWrapper>
                         <MenuWrapper>
                             <MenuContainer>
-                                <MenuOption>1</MenuOption>
-                                <MenuOption>2</MenuOption>
-                                <MenuOption>3</MenuOption>
-                                <MenuOption>4</MenuOption>
+                                {products.map((productOption) => 
+                                    (<MenuOption><img src={productOption.image}/></MenuOption>))}
                             </MenuContainer>
                         </MenuWrapper>
                     </OverlayContainer>

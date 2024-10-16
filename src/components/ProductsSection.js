@@ -34,7 +34,6 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     }, []);
     // console.log(viewportWidth)
     let slidesPerView;
-// 
     if (viewportWidth <= 650 && type !== "general"){
         slidesPerView = 1
     } else if (type !== "general"){
@@ -49,7 +48,7 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     {type === "BestSellers" ? (
         <BestSellerCard image={product.image} description={product.description} />
     ) : (
-        <CategoriesCard image={product.image} />
+        <CategoriesCard categoryData={product} />
     )}
   </SwiperSlide>
 ));

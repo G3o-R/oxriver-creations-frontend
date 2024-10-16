@@ -45,14 +45,13 @@ export const ImageWrapper = styled.div`
         width: 50%;
         height:100%;
     }
-`;
+    `;
 
 export const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px;
     
     @media screen and (min-width: 650px) {
         aspect-ratio: 1/1;
@@ -68,10 +67,6 @@ export const ImageContainer = styled.div`
 
     &:hover img {
         transform: scale(1.05);
-    }
-
-    @media screen and (min-width: 1080px) {
-        border-radius: 12px 0 0 12px;
     }
 `;
 

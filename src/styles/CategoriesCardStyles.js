@@ -58,8 +58,10 @@ export const OverlayWrapper = styled.div`
     opacity: 0;
     visibility: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    /* padding: 20px; */
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     &.active {
@@ -70,16 +72,20 @@ export const OverlayWrapper = styled.div`
 
 export const OverlayContainer = styled.div`
     display: flex;
-    height: 100%;
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 `;
 
 export const TitleWrapper = styled.div`
-    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
 `;
 
 export const CategoryTitle = styled.div`
@@ -89,11 +95,9 @@ export const CategoryTitle = styled.div`
 `;
 
 export const MenuWrapper = styled.div`
-    height: 100%;
     width: 100%;
-    bottom: 0;
-
-`
+    /* margin-top: auto; */
+`;
 
 export const MenuContainer = styled.div`
     display: grid;
@@ -102,10 +106,18 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuOption = styled.div`
-    height: 100%;
     height: 9rem;
     width: 100%;
     background-color: black;
     color: white;
     text-align: center;
-`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+`;
