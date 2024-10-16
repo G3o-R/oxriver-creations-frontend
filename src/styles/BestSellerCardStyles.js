@@ -27,8 +27,13 @@ export const Container = styled.div`
     border-radius: 18px;
     background-color: #fbfbfb;
     transition: transform 0.3s ease;
+    
+    @media screen and (max-width: 650px) {
+        max-width: 450px;
+    }
 
     @media screen and (min-width: 1080px) {
+        /* max-width: 450px; */
         flex-direction: row;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding: 20px;

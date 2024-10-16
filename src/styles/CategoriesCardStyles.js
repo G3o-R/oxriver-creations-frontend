@@ -6,6 +6,7 @@ export const CardWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 450px;
     aspect-ratio: 3/5;
     background-color: white;
     padding: 5px;
@@ -105,7 +106,7 @@ export const MenuContainer = styled.div`
     gap: 5px;
 `;
 
-export const MenuOption = styled.div`
+export const MenuOption = styled.a`
     height: 9rem;
     width: 100%;
     background-color: black;

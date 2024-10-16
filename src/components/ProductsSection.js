@@ -32,13 +32,21 @@ export default function ProductsSection({productsArray, title, settings = {}}){
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    // console.log(viewportWidth)
+
+    console.log(viewportWidth)
     let slidesPerView;
-    if (viewportWidth <= 650 && type !== "general"){
-        slidesPerView = 1
-    } else if (type !== "general"){
-        slidesPerView = 2
-    } else {slidesPerView = 4}
+
+    if (viewportWidth <= 650) {
+      slidesPerView = 1;
+    } else if (type !== "general") {
+      slidesPerView = 2;
+    } else if (viewportWidth <= 900 && type === "general") {
+      slidesPerView = 2;
+    } else if (viewportWidth <= 1250 && type === "general") {
+      slidesPerView = 3;
+    } else {
+      slidesPerView = 4;
+    }
     
     
     
