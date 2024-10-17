@@ -34,7 +34,7 @@ export default function Navbar() {
             <NavLinks>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/products">Products</NavLink>
-                <NavLink to="/contact-&-info">Contact & Info</NavLink>
+                <NavLink to="/services">Services</NavLink>
             </NavLinks>
         </NavbarContainer>
     );

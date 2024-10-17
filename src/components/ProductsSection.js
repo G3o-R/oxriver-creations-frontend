@@ -33,7 +33,6 @@ export default function ProductsSection({productsArray, title, settings = {}}){
         };
     }, []);
 
-    console.log(viewportWidth)
     let slidesPerView;
 
     if (viewportWidth <= 650) {
@@ -73,8 +72,8 @@ function handleSlideChange(swiper){
     setCurrentIndex(swiper.activeIndex)
 }
 
-// add conditions to decrease the number of slidersInView based on the size of the screen
-
+// add a condition so that when on mobile devices smaller than 650px
+// the current card has a state of active or maybe not we'll see
 return(
     <Wrapper>
             <Container>

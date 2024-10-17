@@ -35,7 +35,7 @@ export default function CategoriesCard({categoryData}){
                 <OverlayWrapper className={isActive ? "active" : "hidden"}>
                 {/* <OverlayWrapper className={"active"}> */}
                     <OverlayContainer>
-                        <TitleWrapper>
+                        <TitleWrapper onClick={()=>console.log("go to product page")}>
                             <TitleContainer>
                                 <CategoryTitle>{category_name}</CategoryTitle>
                             </TitleContainer>
@@ -43,7 +43,7 @@ export default function CategoriesCard({categoryData}){
                         <MenuWrapper>
                             <MenuContainer>
                                 {products.map((productOption) => 
-                                    (<MenuOption>
+                                    (<MenuOption onClick={()=>console.log("go to selected product")}>
                                         <img src={productOption.image}/>
                                         <OptionOverlay></OptionOverlay>
                                     </MenuOption>))}
