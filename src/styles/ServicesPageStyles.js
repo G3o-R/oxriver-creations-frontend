@@ -100,7 +100,7 @@ export const DisplayGrid = styled.div`
   }
 
   @media screen and (max-width: 450px) {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
 
     ul::before {
       display: none;
@@ -178,7 +178,6 @@ export const ContactInfoContainer = styled(MethodsContainer)`
 
 export const CustomWebsitesWrapper = styled.div`
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
   border-radius: 8px;
@@ -186,6 +185,11 @@ export const CustomWebsitesWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
   text-align: center;
+  
+  @media screen and (min-width: 768px){
+    position: absolute;
+    
+  }
   `;
 
 export const CustomWebsitesContainer = styled.div`
