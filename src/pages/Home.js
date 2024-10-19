@@ -11,7 +11,8 @@ export default function Home(){
     const [bestSellersArray, setBestSellersArray] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3001/products")
+        // fetch("http://localhost:3001/products")
+        fetch("/.netlify/functions/getResources")
             .then((res) => res.json())
             .then((data) => {
                 setCategoriesArray(data.categories)

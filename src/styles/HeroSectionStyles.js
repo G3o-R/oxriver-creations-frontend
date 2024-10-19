@@ -69,10 +69,10 @@ export const MenuNavBtn = styled.div`
 `;
 
 // still have to do these to for html form
-export const HeroSliderPrevious = styled.div`
+export const HeroSliderPreviousBtn = styled.div`
 
 `;
 
-export const HeroSliderNext = styled.div`
+export const HeroSliderNextBtn = styled.div`
 
 `;
