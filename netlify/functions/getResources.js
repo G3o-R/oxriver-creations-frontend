@@ -1,6 +1,6 @@
 exports.handler = async (event, context) => {
-  const page_components = {
-    products: {
+  const 
+    products = {
       categories: [
         {
           image:
@@ -109,11 +109,10 @@ exports.handler = async (event, context) => {
             "Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus gravida auctor placerat ornare tempus libero vivamus mauris faucibus. Lacinia et bibendum duis lobortis aliquam senectus volutpat sollicitudin. Pulvinar sociosqu pretium vivamus litora laoreet.",
         },
       ],
-    },
-  };
+    }
 
   return {
     statusCode: 200,
-    body: JSON.stringify(page_components),
+    body: JSON.stringify(products),
   };
 };

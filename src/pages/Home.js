@@ -6,21 +6,7 @@ import { HomePage } from "../styles/HomeStyles";
 import ProductsSection from "../components/ProductsSection";
 
 
-export default function Home(){
-    const [categoriesArray, setCategoriesArray] = useState([])
-    const [bestSellersArray, setBestSellersArray] = useState([])
-
-    useEffect(() => {
-        // fetch("http://localhost:3001/products")
-        fetch("/.netlify/functions/getResources")
-            .then((res) => res.json())
-            .then((data) => {
-                setCategoriesArray(data.categories)
-                setBestSellersArray(data.best_sellers)
-            });
-    }, []);
-
-
+export default function Home({categoriesArray, bestSellersArray}){
 
     const settingsBestSeller = {
         numSwipers: 2,
