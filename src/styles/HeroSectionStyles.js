@@ -3,12 +3,20 @@ import styled from "styled-components";
 export const HeroSlider = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 588px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000;
+
+  @media screen and (min-width: 650px) {
+    height:656px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    height: 768px;
+  }
 `;
 
 export const HeroSliderWrapper = styled.div`
@@ -109,19 +117,15 @@ export const SliderMenuNavContainer = styled.div`
       background-color: #fff;
       margin: 0 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-
+      
       &:hover {
         background-color: #f5a623;
+        transition: background-color 0.3s ease;
       }
 
       &.selected{
         background-color: #f5a623;
       }
-    }
-
-    .active {
-      background-color: #f5a623;
     }
   }
 `;

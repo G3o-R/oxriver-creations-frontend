@@ -10,11 +10,11 @@ import {
   SliderMenuNavContainer,
  } from "../styles/HeroSectionStyles";
 
- const threeDPrintStockImg = "https://media.istockphoto.com/id/1182074642/photo/the-3d-printing-machine-make-the-3d-prototype-model-by-resin-material.jpg?s=1024x1024&w=is&k=20&c=KwKN71AOAbQvTBjKYmUVg_78jOhk0chPMNQY1LoC-Po="
+ const threeDPrintStockImg = "https://www.shutterstock.com/shutterstock/photos/2250205475/display_1500/stock-photo-fdm-d-printer-with-delta-kinematic-layout-makes-a-flange-part-with-internal-structure-from-silver-2250205475.jpg"
 
- const paintingStockImg = "https://www.shutterstock.com/shutterstock/photos/1540650029/display_1500/stock-photo-female-artist-works-on-abstract-oil-painting-moving-paint-brush-energetically-she-creates-modern-1540650029.jpg"
+ const paintingStockImg = "https://www.shutterstock.com/shutterstock/photos/2475382567/display_1500/stock-photo-hands-tablet-or-person-reading-screen-for-business-with-online-advice-review-feedback-and-2475382567.jpg"
 
- const craftingBackgroundImg = "./vecteezy_ai-generated-crafts-advertisment-background-with-copy-space_37245138.jpg"
+ const craftingBackgroundImg = "https://www.shutterstock.com/shutterstock/photos/2425315979/display_1500/stock-photo-process-of-printing-image-on-clothes-heat-press-machine-printing-custom-design-on-t-shirt-and-2425315979.jpg"
 
 export default function HeroSection(){
 

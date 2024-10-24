@@ -7,16 +7,9 @@ export const Wrapper = styled.div`
     margin: 15px 5px;
     /* border color */
     background-color: #2e2e2e;
+    /* background-color: #f7f7f7; */
     border-radius: 24px;
     transition: box-shadow 0.3s ease;
-
-    &:hover {
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    @media screen and (min-width: 1080px) {
-        background-color: #2e2e2e;
-    }
 `;
 
 export const Container = styled.div`
@@ -29,6 +22,7 @@ export const Container = styled.div`
     /* card color */
     background-color: #e9e9e9;
     transition: transform 0.3s ease;
+    box-shadow: inset 0 8px 16px rgba(46, 46, 46, 0.6);
     
     @media screen and (max-width: 650px) {
         max-width: 450px;
@@ -36,9 +30,7 @@ export const Container = styled.div`
     }
 
     @media screen and (min-width: 1080px) {
-        /* max-width: 450px; */
         flex-direction: row;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding: 20px;
     }
 `;
