@@ -22,7 +22,7 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     const [slidesLength, setSlidesLength] = useState(0)
     const {type = "general", numSwipers = 4} = settings
     const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-    console.log(productsArray)
+
     useEffect(() => {
         const handleResize = () => {
             setViewportWidth(window.innerWidth);
@@ -67,32 +67,22 @@ const handleSwiperInit = (swiper) => {
     setSlidesLength(swiper.slides.length);
 };
 
-
-
-
 function handleSlideChange(swiper){
     setCurrentIndex(swiper.activeIndex)
 }
 
-// add a condition so that when on mobile devices smaller than 650px
-// the current card has a state of active or maybe not we'll see
+function handleSlideTo(index) {
+    if (swiperRef.current && swiperRef.current.slideTo) {
+        swiperRef.current.slideTo(index, 0);
+    }
+}
+
 return (
   <Wrapper>
     <Container>
       <HeaderContainer>
         <h1>{title}</h1>
       </HeaderContainer>
-      <NavWrapper>
-        <NavContainer>
-          <ul>
-            {productsArray.map((product, index) => (
-              <li key={product.id} className={`nav-item-${index}`}>
-                {/* Additional content can go here */}
-              </li>
-            ))}
-          </ul>
-        </NavContainer>
-      </NavWrapper>
       <ContentWrapper>
         <ContentContainer>
           <Swiper
@@ -105,6 +95,20 @@ return (
           </Swiper>
         </ContentContainer>
       </ContentWrapper>
+      <NavWrapper>
+        <NavContainer>
+          <ul>
+            {productsArray.map((product, index) => (
+              <li 
+              key={product.id} 
+              className={`nav-item-${index} ${currentIndex === index ? "selected" : "" }`} 
+              onClick={()=>handleSlideTo(index)}>
+                {/* Additional content can go here */}
+              </li>
+            ))}
+          </ul>
+        </NavContainer>
+      </NavWrapper>
     </Container>
   </Wrapper>
 );
