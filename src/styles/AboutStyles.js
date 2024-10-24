@@ -19,6 +19,41 @@ export  const HeaderContainer = styled.div`
     }
 `;
 
+export const NavWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const NavContainer = styled.div`
+  margin-left: 20px;
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f5a623;
+        transition: background-color 0.3s ease;
+      }
+
+      &.selected {
+        background-color: #f5a623;
+      }
+    }
+  }
+`;
+
 export const AboutSection = styled.section`
   position: relative;
   display: flex;

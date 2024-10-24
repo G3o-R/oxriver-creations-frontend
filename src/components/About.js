@@ -1,4 +1,10 @@
-import { AboutWrapper, AboutSection, HeaderContainer } from "../styles/AboutStyles";
+import { 
+    AboutWrapper, 
+    AboutSection, 
+    HeaderContainer,
+    NavWrapper,
+    NavContainer
+} from "../styles/AboutStyles";
 import { useRef,useState } from "react";
 import { AboutCrafts, AboutPrints } from "./AboutCards";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -20,24 +26,49 @@ export default function About(){
         setCurrentIndex(swiper.activeIndex)
     }
 
+    function handleSlideTo(index) {
+        if (swiperRef.current && swiperRef.current.slideTo) {
+            swiperRef.current.slideTo(index, 0);
+        }
+    }
 
-    return(
-        <AboutWrapper>
-            <AboutSection>
-                <HeaderContainer>
-                    <h1>About</h1>
-                </HeaderContainer>
-            <Swiper
-                    spaceBetween={15}
-                    slidesPerView={1}
-                    className="my-swiper-here"
-                    onSwiper={handleSwiperInit}
-                    onSlideChange={handleSlideChange}
-                >
-                    <SwiperSlide> <AboutCrafts /> </SwiperSlide>
-                    <SwiperSlide> <AboutPrints /> </SwiperSlide>
-                </Swiper>
-            </AboutSection>
-        </AboutWrapper>
-    )
+    return (
+      <AboutWrapper>
+        <AboutSection>
+          <HeaderContainer>
+            <h1>About</h1>
+          </HeaderContainer>
+          <Swiper
+            spaceBetween={15}
+            slidesPerView={1}
+            className="my-swiper-here"
+            onSwiper={handleSwiperInit}
+            onSlideChange={handleSlideChange}
+          >
+            <SwiperSlide>
+              {" "}
+              <AboutCrafts />{" "}
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <AboutPrints />{" "}
+            </SwiperSlide>
+          </Swiper>
+          <NavWrapper>
+            <NavContainer>
+              <ul>
+                <li
+                  className={currentIndex === 0 ? "selected" : ""}
+                  onClick={() => handleSlideTo(0)}
+                ></li>
+                <li
+                  className={currentIndex === 1 ? "selected" : ""}
+                  onClick={() => handleSlideTo(1)}
+                ></li>
+              </ul>
+            </NavContainer>
+          </NavWrapper>
+        </AboutSection>
+      </AboutWrapper>
+    );
 }

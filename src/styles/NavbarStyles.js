@@ -15,9 +15,9 @@ export const NavbarContainer = styled.div`
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-  /* &.--transparent{
+  &.--transparent{
     background-color:  transparent;
-  } */
+  }
   
   &.--hidden {
     transform: translateY(-100%);

@@ -96,19 +96,25 @@ return (
         </ContentContainer>
       </ContentWrapper>
       <NavWrapper>
-        <NavContainer>
-          <ul>
-            {productsArray.map((product, index) => (
-              <li 
-              key={product.id} 
-              className={`nav-item-${index} ${currentIndex === index ? "selected" : "" }`} 
-              onClick={()=>handleSlideTo(index)}>
-                {/* Additional content can go here */}
-              </li>
-            ))}
-          </ul>
-        </NavContainer>
-      </NavWrapper>
+    <NavContainer>
+        <ul>
+            {productsArray.map((product, index) => {
+                const isSelected =
+                    index >= currentIndex && index < currentIndex + slidesPerView;
+                
+                return (
+                    <li 
+                        key={product.id} 
+                        className={`nav-item-${index} ${isSelected ? "selected" : ""}`} 
+                        onClick={() => handleSlideTo(index)}
+                    >
+                    </li>
+                );
+            })}
+        </ul>
+    </NavContainer>
+</NavWrapper>
+
     </Container>
   </Wrapper>
 );
