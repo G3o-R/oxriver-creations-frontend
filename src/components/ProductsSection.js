@@ -95,26 +95,26 @@ return (
           </Swiper>
         </ContentContainer>
       </ContentWrapper>
-      <NavWrapper>
-    <NavContainer>
-        <ul>
+      <NavWrapper className={slidesLength === slidesPerView ? "hidden" : ""}>
+        <NavContainer>
+          <ul>
             {productsArray.map((product, index) => {
-                const isSelected =
-                    index >= currentIndex && index < currentIndex + slidesPerView;
-                
-                return (
-                    <li 
-                        key={product.id} 
-                        className={`nav-item-${index} ${isSelected ? "selected" : ""}`} 
-                        onClick={() => handleSlideTo(index)}
-                    >
-                    </li>
-                );
-            })}
-        </ul>
-    </NavContainer>
-</NavWrapper>
+              const isSelected =
+                index >= currentIndex && index < currentIndex + slidesPerView;
 
+              return (
+                <li
+                  key={product.id}
+                  className={`nav-item-${index} ${
+                    isSelected ? "selected" : ""
+                  }`}
+                  onClick={() => handleSlideTo(index)}
+                ></li>
+              );
+            })}
+          </ul>
+        </NavContainer>
+      </NavWrapper>
     </Container>
   </Wrapper>
 );

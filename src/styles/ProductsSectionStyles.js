@@ -34,6 +34,10 @@ export const NavWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  &.hidden{
+    display: none;
+  }
 `;
 
 export const NavContainer = styled.div`
