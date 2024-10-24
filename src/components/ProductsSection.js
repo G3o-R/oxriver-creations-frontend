@@ -22,7 +22,7 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     const [slidesLength, setSlidesLength] = useState(0)
     const {type = "general", numSwipers = 4} = settings
     const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
+    console.log(productsArray)
     useEffect(() => {
         const handleResize = () => {
             setViewportWidth(window.innerWidth);
@@ -76,32 +76,36 @@ function handleSlideChange(swiper){
 
 // add a condition so that when on mobile devices smaller than 650px
 // the current card has a state of active or maybe not we'll see
-return(
-    <Wrapper>
-            <Container>
-                <HeaderContainer>
-                    <h1>{title}</h1>
-                </HeaderContainer>
-                <NavWrapper>
-                    <NavContainer>
-                        <ul>
-
-                        </ul>
-                    </NavContainer>
-                </NavWrapper>
-                <ContentWrapper>
-                    <ContentContainer>
-                        <Swiper
-                            spaceBetween={0}
-                            slidesPerView={slidesPerView}
-                            onSwiper={handleSwiperInit}
-                            onSlideChange={handleSlideChange}
-                        >
-                            {productsToDisplay}
-                        </Swiper>
-                    </ContentContainer>
-                </ContentWrapper>
-            </Container>
-        </Wrapper>
-    )
+return (
+  <Wrapper>
+    <Container>
+      <HeaderContainer>
+        <h1>{title}</h1>
+      </HeaderContainer>
+      <NavWrapper>
+        <NavContainer>
+          <ul>
+            {productsArray.map((product, index) => (
+              <li key={product.id} className={`nav-item-${index}`}>
+                {/* Additional content can go here */}
+              </li>
+            ))}
+          </ul>
+        </NavContainer>
+      </NavWrapper>
+      <ContentWrapper>
+        <ContentContainer>
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={slidesPerView}
+            onSwiper={handleSwiperInit}
+            onSlideChange={handleSlideChange}
+          >
+            {productsToDisplay}
+          </Swiper>
+        </ContentContainer>
+      </ContentWrapper>
+    </Container>
+  </Wrapper>
+);
 }
