@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import { HomePage } from "../styles/HomeStyles";
-import ProductsSection from "../components/ProductsSection";
+import SliderSection from "../components/SliderSection";
 import HeroSection from "../components/HeroSection";
 
 
@@ -19,8 +19,8 @@ export default function Home({categoriesArray, bestSellersArray}){
         <HeroSection />
 
         {/* bestSeller cards are not the same height under 650px*/}
-        <ProductsSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
-        <ProductsSection productsArray={categoriesArray} title="Products"/>
+        <SliderSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
+        <SliderSection productsArray={categoriesArray} title="Products"/>
         <About />
         <Footer />
     </HomePage>

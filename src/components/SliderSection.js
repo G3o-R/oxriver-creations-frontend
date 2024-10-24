@@ -6,7 +6,7 @@ import {
     ContentContainer,
     NavWrapper,
     NavContainer
- } from "../styles/ProductsSectionStyles";
+ } from "../styles/SliderSectionStyles";
 
 import CategoriesCard from "./CategoriesCard";
 
@@ -16,7 +16,7 @@ import "swiper/css"
 import BestSellerCard from "./BestSellerCards";
 
 
-export default function ProductsSection({productsArray, title, settings = {}}){
+export default function SliderSection({productsArray, title, settings = {}}){
     const swiperRef = useRef(null)
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slidesLength, setSlidesLength] = useState(0)
