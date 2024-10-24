@@ -59,6 +59,7 @@ export const NavContainer = styled.div`
 
       &.selected {
         background-color: #f5a623;
+        transition: background-color 0.3s ease;
       }
     }
   }
