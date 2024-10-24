@@ -1,78 +1,159 @@
 import styled from "styled-components";
 
 export const HeroSlider = styled.div`
-
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
 `;
 
 export const HeroSliderWrapper = styled.div`
-
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const HeroSliderOverlay = styled.div`
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 `;
 
 export const OverlayTextWrapper = styled.div`
+  text-align: center;
+  color: white;
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
-
 export const SlideWrapper = styled.div`
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s ease;
+  opacity: ${(props) => (props.className === "active" ? "1" : "0")};
+  z-index: 1;
 `;
 
 export const SlideBackground = styled.div`
-
-  img{
-
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
-// not sure how useful this will be 
-export const SlideContentWrapper = styled.div`
-
-`;
-
-export const SlideContentContainer = styled.div`
-
-`;
-// ----------------------------------
-
 export const SliderMenuNavWrapper = styled.div`
-
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 `;
 
 export const SliderMenuNavContainer = styled.div`
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  ul{
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
 
-    li{
-      /* hero-slider-menu-nav-button goes here */
+      &:hover {
+        background-color: #f5a623;
+      }
 
+      &.selected{
+        background-color: #f5a623;
+      }
+    }
+
+    .active {
+      background-color: #f5a623;
     }
   }
-
 `;
 
-export const MenuNavBtn = styled.div`
-
-  .btn-number{
-
-    span{
-
-    }
-  }
-
-  .nav-btn-text{
-
-  }
-`;
-
-// still have to do these to for html form
 export const HeroSliderPreviousBtn = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
 
+  &:hover {
+    background-color: #f5a623;
+  }
 `;
 
 export const HeroSliderNextBtn = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
 
+  &:hover {
+    background-color: #f5a623;
+  }
 `;

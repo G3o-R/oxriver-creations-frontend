@@ -4,6 +4,7 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import { HomePage } from "../styles/HomeStyles";
 import ProductsSection from "../components/ProductsSection";
+import HeroSection from "../components/HeroSection";
 
 
 export default function Home({categoriesArray, bestSellersArray}){
@@ -15,12 +16,9 @@ export default function Home({categoriesArray, bestSellersArray}){
 
     return(
     <HomePage>
-        <div className="hero-section-placeholder" style={{
-            backgroundColor: "white",
-            width: "100%",
-            height: "70vh"
-        }}></div>
-        {/* Products: 3d prints, aprons, etc */}
+        <HeroSection />
+
+        {/* bestSeller cards are not the same height under 650px*/}
         <ProductsSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
         <ProductsSection productsArray={categoriesArray} title="Products"/>
         <About />

@@ -30,6 +30,7 @@ export const Container = styled.div`
     
     @media screen and (max-width: 650px) {
         max-width: 450px;
+        height: 100%;
     }
 
     @media screen and (min-width: 1080px) {
@@ -57,11 +58,8 @@ export const ImageContainer = styled.div`
     height: 100%;
     overflow: hidden;
     border-radius: 12px;
+    aspect-ratio: 1/1;
     
-    @media screen and (min-width: 650px) {
-        aspect-ratio: 1/1;
-    }
-
     img {
         width: 100%;
         height: 100%;
