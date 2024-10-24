@@ -1,5 +1,5 @@
 exports.handler = async (event, context) => {
-  const products = {
+  const resources = {
     categories: [
         {
             id: 1,
@@ -112,6 +112,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(products),
+    body: JSON.stringify(resources),
   };
 };
