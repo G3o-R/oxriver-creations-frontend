@@ -43,7 +43,7 @@ export default function HeroSection(){
       <HeroSliderWrapper>
         <HeroSliderOverlay>
           <OverlayTextWrapper>
-            <h1>text here</h1>
+            <h1>Text Here</h1>
             <h2>text here</h2>
           </OverlayTextWrapper>
         </HeroSliderOverlay>

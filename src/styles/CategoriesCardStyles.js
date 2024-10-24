@@ -8,7 +8,7 @@ export const CardWrapper = styled.div`
     width: 100%;
     max-width: 450px;
     aspect-ratio: 3/5;
-    background-color: white;
+    background-color: #2e2e2e;
     padding: 5px;
     margin: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

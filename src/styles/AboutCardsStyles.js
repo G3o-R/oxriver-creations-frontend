@@ -5,12 +5,12 @@ export const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 20px;
-    background-color: white;
+    background-color: #e9e9e9;
     border-radius: 24px 24px 24px 24px;
     
     @media screen and (min-width: 768px) {
-        background-color: #e0e0e0;
         height: 540px;
+        background-color: #2e2e2e;
     }
     `;
 
@@ -23,10 +23,10 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1200px;
     border-radius: 12px;
-    background-color: white;
+    background-color: #e9e9e9;
     
     @media screen and (min-width: 768px) {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 8px 16px rgba(46, 46, 46, 0.8);
         flex-direction: row;
         padding: 20px;
     }

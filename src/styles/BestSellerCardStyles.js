@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
     justify-content: center;
     padding: 10px;
     margin: 15px 5px;
-    background-color: #fbfbfb;
+    /* border color */
+    background-color: #2e2e2e;
     border-radius: 24px;
     transition: box-shadow 0.3s ease;
 
@@ -14,7 +15,7 @@ export const Wrapper = styled.div`
     }
 
     @media screen and (min-width: 1080px) {
-        background-color: #e0e0e0;
+        background-color: #2e2e2e;
     }
 `;
 
@@ -25,7 +26,8 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     border-radius: 18px;
-    background-color: #fbfbfb;
+    /* card color */
+    background-color: #e9e9e9;
     transition: transform 0.3s ease;
     
     @media screen and (max-width: 650px) {
@@ -84,6 +86,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TextContainer = styled.div`
+
     h1 {
         font-size: 1.8rem;
         color: #333;
@@ -95,6 +98,7 @@ export const TextContainer = styled.div`
         line-height: 1.6;
         color: #666;
         text-align: justify;
+        /* margin: 17.6px 10px; */
     }
 
     @media screen and (min-width: 768px) {
@@ -104,6 +108,17 @@ export const TextContainer = styled.div`
 
         p {
             font-size: 1.1rem;
+        }
+    }
+
+    @media screen and (max-width: 1080px) {
+        h1 {
+        margin: 23px 10px 15px;
+
+        }
+
+        p {
+        margin: 17.6px 10px;
         }
     }
 `;
