@@ -108,7 +108,6 @@ export const DisplayGrid = styled.div`
   }
 `;
 
-
 export const MethodsWrapper = styled.div`
   margin-top: 40px;
   display: flex;
@@ -116,14 +115,13 @@ export const MethodsWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  .PS{
+  .PS {
     color: white;
     margin: 0px 20px 20px 20px;
   }
-  &.contact-info{
-    margin:0;
-
-}
+  &.contact-info {
+    margin: 0;
+  }
 `;
 
 export const MethodsContainer = styled.div`
@@ -131,48 +129,51 @@ export const MethodsContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   color: white;
-  
+
   h3::before {
-      content: "•";
-      margin: 0px 20px;  
+    content: "•";
+    margin: 0px 20px;
+  }
+
+  h3:first-child::before {
+    content: "";
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    transition: color 0.3s;
+    /* margin: 20px 0px 10px 0px; */
+
+    &:hover {
+      color: #f5a623;
     }
-    
-    h3:first-child::before {
-        content: "";
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    h3::before {
+      content: "";
+      margin: 0px 20px;
     }
-    
+  }
+
+  @media screen and (max-width: 450px) {
     h3 {
-        font-size: 1.5rem;
-        color: white;
-        text-align: center;
-        transition: color 0.3s;
-        /* margin: 20px 0px 10px 0px; */
-        
-        &:hover {
-            color: #f5a623;
-        }
+      font-size: 1.2rem;
     }
-    
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    @media screen and (max-width: 450px) {
-        h3 {
-            font-size: 1.2rem;
-        }
-    }
-    `;
+  }
+`;
 
 export const ContactInfoWrapper = styled(MethodsWrapper)`
-
+  cursor: pointer;
 `;
 
 export const ContactInfoContainer = styled(MethodsContainer)`
-
   h3 {
-    margin:0;
+    margin: 0;
   }
 `;
 
@@ -185,12 +186,11 @@ export const CustomWebsitesWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
   text-align: center;
-  
-  @media screen and (min-width: 768px){
+
+  @media screen and (min-width: 768px) {
     position: absolute;
-    
   }
-  `;
+`;
 
 export const CustomWebsitesContainer = styled.div`
   display: flex;
@@ -218,4 +218,3 @@ export const CustomWebsitesContainer = styled.div`
     text-align: center;
   }
 `;
-
