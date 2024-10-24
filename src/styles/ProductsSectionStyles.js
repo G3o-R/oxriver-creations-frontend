@@ -29,6 +29,14 @@ export const HeaderContainer = styled.div`
     }
 `;
 
+export const NavWrapper = styled.div`
+
+`;
+
+export const NavContainer = styled.div`
+
+`;
+
 export const ContentWrapper = styled.div`
     width: 100%;
     display: flex;

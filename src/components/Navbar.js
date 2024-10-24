@@ -14,14 +14,17 @@ export default function Navbar() {
     const navigate = useNavigate();
 
     let lastScrollY = window.scrollY;
-
     window.addEventListener("scroll", () => {
-        if (lastScrollY > window.scrollY && window.scrollY > 100) {
-            setEffect("--visible");
-        } else if (lastScrollY < window.scrollY && window.scrollY > 100) {
-            setEffect("--hidden");
-        }
-        lastScrollY = window.scrollY;
+      if (lastScrollY > window.scrollY || window.scrollY < 400) {
+        setEffect("--visible");
+      }
+      //   if(lastScrollY > window.scrollY && window.scrollY < 400){
+      //       setEffect("--transparent")
+      //   }
+      else if (lastScrollY < window.scrollY && window.scrollY > 400) {
+        setEffect("--hidden");
+      }
+      lastScrollY = window.scrollY;
     });
 
     return (

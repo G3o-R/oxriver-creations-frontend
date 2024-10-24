@@ -18,7 +18,7 @@ import {
 } from "../styles/CategoriesCardStyles";
 
 export default function CategoriesCard({categoryData}){
-    const {image, category_name, products} = categoryData
+    const {image, name, products} = categoryData
     const [isActive, setIsActive] = useState(false)
 
     return(
@@ -37,13 +37,15 @@ export default function CategoriesCard({categoryData}){
                     <OverlayContainer>
                         <TitleWrapper onClick={()=>console.log("go to product page")}>
                             <TitleContainer>
-                                <CategoryTitle>{category_name}</CategoryTitle>
+                                <CategoryTitle>{name}</CategoryTitle>
                             </TitleContainer>
                         </TitleWrapper>
                         <MenuWrapper>
                             <MenuContainer>
                                 {products.map((productOption) => 
-                                    (<MenuOption onClick={()=>console.log("go to selected product")}>
+                                    (<MenuOption
+                                     onClick={()=>console.log("go to selected product")} 
+                                     key={productOption.id}>
                                         <img src={productOption.image}/>
                                         <OptionOverlay></OptionOverlay>
                                     </MenuOption>))}

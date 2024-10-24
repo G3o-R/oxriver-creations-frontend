@@ -3,7 +3,9 @@ import {
     Container,
     HeaderContainer,
     ContentWrapper,
-    ContentContainer
+    ContentContainer,
+    NavWrapper,
+    NavContainer
  } from "../styles/ProductsSectionStyles";
 
 import CategoriesCard from "./CategoriesCard";
@@ -51,7 +53,7 @@ export default function ProductsSection({productsArray, title, settings = {}}){
     
     // have to add an ID to the objects for the keys
     const productsToDisplay = productsArray.map((product) => (
-        <SwiperSlide>
+        <SwiperSlide key={product.id}>
     {type === "BestSellers" ? (
         <BestSellerCard image={product.image} description={product.description} />
     ) : (
@@ -80,6 +82,13 @@ return(
                 <HeaderContainer>
                     <h1>{title}</h1>
                 </HeaderContainer>
+                <NavWrapper>
+                    <NavContainer>
+                        <ul>
+
+                        </ul>
+                    </NavContainer>
+                </NavWrapper>
                 <ContentWrapper>
                     <ContentContainer>
                         <Swiper
