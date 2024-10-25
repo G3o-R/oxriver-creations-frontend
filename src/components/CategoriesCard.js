@@ -33,7 +33,6 @@ export default function CategoriesCard({categoryData}){
                     </ImageContainer>
                 </ImageWrapper>
                 <OverlayWrapper className={isActive ? "active" : "hidden"}>
-                {/* <OverlayWrapper className={"active"}> */}
                     <OverlayContainer>
                         <TitleWrapper onClick={()=>console.log("go to product page")}>
                             <TitleContainer>
@@ -48,7 +47,7 @@ export default function CategoriesCard({categoryData}){
                                      key={productOption.id}>
                                         <img src={productOption.image}/>
                                         <OptionOverlay></OptionOverlay>
-                                    </MenuOption>))}
+                                    </MenuOption>)).slice(0,4)}
                             </MenuContainer>
                         </MenuWrapper>
                     </OverlayContainer>
