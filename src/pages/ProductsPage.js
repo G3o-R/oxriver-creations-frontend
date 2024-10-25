@@ -1,16 +1,16 @@
-import ProductCard from "../components/ProductCard";
+import ProductDisplay from "../components/ProductDisplay";
+
 import { 
-    ProductsContainer,
     ProductsPage,
-    ProductsWrapper,
-    StyledGrid,
  } from "../styles/ProductsStyles";
 
-export default function Products() {
+export default function Products({categoriesArray}) {
+
+  const categoriesToDisplay = categoriesArray.map((category) => <ProductDisplay key={category.id} category={category}/>)
 
   return (
     <ProductsPage>
-
+      {categoriesToDisplay[0]}
     </ProductsPage>
   );
 }

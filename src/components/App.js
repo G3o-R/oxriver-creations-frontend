@@ -34,11 +34,10 @@ if (isLoading){
       <Navbar />
         <Routes>
           <Route path='/' element={<Home categoriesArray={categoriesArray} bestSellersArray={bestSellersArray}/>} />
-          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products" element={<ProductsPage categoriesArray={categoriesArray} />} />
           <Route path="services" element={<Services />} />
         </Routes>
       </BrowserRouter>
-      {/* <HeroSection /> */}
     </div>
   );
 }

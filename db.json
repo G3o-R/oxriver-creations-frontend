@@ -3,7 +3,7 @@
         "categories": [
             {
                 "id": 1,
-                "image": "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                "image": "https://www.shutterstock.com/shutterstock/photos/2522618959/display_1500/stock-photo-photo-restaurant-equipment-modern-industrial-kitchen-with-furniture-window-2522618959.jpg",
                 "name": "Kitchen Ware",
                 "products": [
                     {
@@ -46,8 +46,8 @@
             },
             {
                 "id": 2,
-                "image": "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-                "name": "Fidget Toys",
+                "image": "https://www.shutterstock.com/shutterstock/photos/2483144443/display_1500/stock-photo-row-of-colorful-d-printing-filament-pla-material-on-environmentally-friendly-and-recyclable-paper-2483144443.jpg",
+                "name": "3D Prints",
                 "products": [
                     {
                         "id": 1,
@@ -89,8 +89,8 @@
             },
             {
                 "id": 3,
-                "image": "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-                "name": "Custom",
+                "image": "https://www.shutterstock.com/shutterstock/photos/2494702611/display_1500/stock-photo-young-berded-man-speaking-on-a-business-training-standing-in-office-during-a-conference-or-seminar-2494702611.jpg",
+                "name": "Business Needs",
                 "products": [
                     {
                         "id": 1,
