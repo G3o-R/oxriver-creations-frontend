@@ -107,6 +107,9 @@ exports.handler = async (event, context) => {
             "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus gravida auctor placerat ornare tempus libero vivamus mauris faucibus. Lacinia et bibendum duis lobortis aliquam senectus volutpat sollicitudin. Pulvinar sociosqu pretium vivamus litora laoreet.",
             name: "Damn This is Hot"
         }
+    ],
+    products_array: [
+        
     ]
 }
 

@@ -9,15 +9,17 @@ import ProductsPage from '../pages/ProductsPage';
 function App() {
   const [categoriesArray, setCategoriesArray] = useState([])
   const [bestSellersArray, setBestSellersArray] = useState([])
+  const [productsArray, setProductsArray] = useState([])
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3001/resources")
-    // fetch("/.netlify/functions/getResources")
+    // fetch("http://localhost:3001/resources")
+    fetch("/.netlify/functions/getResources")
         .then((res) => res.json())
         .then((data) => {
             setCategoriesArray(data.categories)
             setBestSellersArray(data.best_sellers)
+            setProductsArray(data.products_array)
             setIsLoading(false)
         });
 }, []);
@@ -34,7 +36,7 @@ if (isLoading){
       <Navbar />
         <Routes>
           <Route path='/' element={<Home categoriesArray={categoriesArray} bestSellersArray={bestSellersArray}/>} />
-          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products" element={<ProductsPage productsArray={productsArray}/>} />
           <Route path="services" element={<Services />} />
         </Routes>
       </BrowserRouter>

@@ -16,7 +16,7 @@ export default function Home({categoriesArray, bestSellersArray}){
 
     return(
     <HomePage>
-        <HeroSection />
+        <HeroSection className="this-is-a-test"/>
 
         {/* bestSeller cards are not the same height under 650px*/}
         <SliderSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
