@@ -5,8 +5,9 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 175px;
   width: 100%;
-  max-width: 200px;
+  height: 100%;
   aspect-ratio: 3/5;
   background-color: #2e2e2e;
   padding: 5px;
@@ -19,6 +20,18 @@ export const CardWrapper = styled.div`
   &:hover {
     background-color: #575a65;
   }
+
+  @media screen and (min-width: 1080px) {
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 1325px) {
+    max-width: 250px;
+  }
+
+  @media screen and (min-width: 1560px) {
+    max-width: 300px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -26,7 +39,9 @@ export const CardContainer = styled.div`
   position: relative;
   flex-direction: column;
   width: 100%;
+  border-radius: 8px;
   height: 100%;
+  overflow: hidden;
 
   img {
     width: 100%;

@@ -8,7 +8,7 @@ export default function ProductCard({productData}){
     const {image} = productData;
 
     return(
-        <CardWrapper>
+        <CardWrapper className="product-card">
             <CardContainer>
                 <img src={image} alt="random text here" />
             </CardContainer>

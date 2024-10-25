@@ -4,29 +4,34 @@ export const ProductDisplayWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  /* background-color: #454545; */
 `;
 
 export const ProductDisplayContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1560px;
+  max-width: 1860px;
   width: 100%;
-  background-color: #e9e9e9;
   overflow: hidden;
 `;
 
 export const ImageWrapper = styled.div`
   position: relative;
-  width: 80%;
+  top: 0;
+  max-width: 1560px;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 `;
 
 export const ImageContainer = styled.div`
+  position: relative;
   img {
     width: 100%;
     height: 100%;
@@ -67,26 +72,45 @@ export const Overlay = styled.div`
 
 export const ProductCarouselWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 100%;
-  padding: 1rem;
-  position: relative;
+  max-width: 1560px;
+  padding: 0;
+  z-index: 2;
+  margin-top: -175px;
+  
+  @media screen and (min-width: 1080px) {
+    margin-top: -150px;
+}
+
+@media screen and (min-width: 1325px) {
+    margin-top: -125px;
+}
+
+@media screen and (min-width: 1560px) {
+      margin-top: -100px;
+  }
 `;
 
 export const ProductCarouselContainer = styled.div`
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  
+  overflow: hidden;
+  width: 100%;
+  height: 560px;
+  display: flex;
+
+  .swiper {
     width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
     display: flex;
-
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    justify-content: center;
+    align-items: center;
+  }
 `;
