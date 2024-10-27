@@ -1,17 +1,13 @@
-import ProductDisplay from "../components/ProductDisplay";
+import CategoriesDisplay from "../components/CategoriesDisplay";
 
 import { 
     ProductsPage,
  } from "../styles/ProductsStyles";
 
 export default function Products({categoriesArray}) {
-
-  // const categoriesToDisplay = categoriesArray.map((category) => <ProductDisplay key={category.id} category={category}/>)
-
   return (
     <ProductsPage>
-      {/* {categoriesToDisplay[0]} */}
-      <ProductDisplay categoriesArray={categoriesArray} />
+      <CategoriesDisplay categoriesArray={categoriesArray} />
     </ProductsPage>
   );
 }

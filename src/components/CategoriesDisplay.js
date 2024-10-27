@@ -2,18 +2,18 @@ import {
   ImageContainer,
   ImageWrapper,
   Overlay,
-  ProductCarouselContainer,
-  ProductCarouselWrapper,
-  ProductDisplayContainer,
-  ProductDisplayWrapper,
-} from "../styles/ProductDisplayStyles";
+  CategoryCarouselContainer,
+  CategoryCarouselWrapper,
+  CategoryDisplayContainer,
+  CategoryDisplayWrapper,
+} from "../styles/CategoriesDisplayStyles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import "swiper/css";
 import ProductCard from "./ProductCard";
 
-export default function ProductDisplay({ categoriesArray }) {
+export default function CategoriesDisplay({ categoriesArray }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -49,8 +49,8 @@ export default function ProductDisplay({ categoriesArray }) {
   });
 
   return (
-    <ProductDisplayWrapper>
-      <ProductDisplayContainer>
+    <CategoryDisplayWrapper>
+      <CategoryDisplayContainer>
         <ImageWrapper>
           <ImageContainer>
             <img
@@ -64,8 +64,8 @@ export default function ProductDisplay({ categoriesArray }) {
             </Overlay>
           </ImageContainer>
         </ImageWrapper>
-        <ProductCarouselWrapper>
-          <ProductCarouselContainer>
+        <CategoryCarouselWrapper>
+          <CategoryCarouselContainer>
             <Swiper
               spaceBetween={-50}
               slidesPerView={window.innerWidth < 768 ? 3 : 5}
@@ -74,9 +74,9 @@ export default function ProductDisplay({ categoriesArray }) {
             >
               {categoriesToDisplay}
             </Swiper>
-          </ProductCarouselContainer>
-        </ProductCarouselWrapper>
-      </ProductDisplayContainer>
-    </ProductDisplayWrapper>
+          </CategoryCarouselContainer>
+        </CategoryCarouselWrapper>
+      </CategoryDisplayContainer>
+    </CategoryDisplayWrapper>
   );
 }

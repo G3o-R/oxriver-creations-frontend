@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const ProductDisplayWrapper = styled.div`
+export const CategoryDisplayWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   `;
 
-export const ProductDisplayContainer = styled.div`
+export const CategoryDisplayContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@ export const Overlay = styled.div`
   }
 `;
 
-export const ProductCarouselWrapper = styled.div`
+export const CategoryCarouselWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@ export const ProductCarouselWrapper = styled.div`
   }
 `;
 
-export const ProductCarouselContainer = styled.div`
+export const CategoryCarouselContainer = styled.div`
   position: relative;
   max-width: 1560px;
   overflow: hidden;
