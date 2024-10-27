@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import ProductCard from "./ProductCard";
 
-export default function CategoriesDisplay({ categoriesArray }) {
+export default function CategoriesDisplay({ categoriesArray, handleCategorySelect }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -41,7 +41,9 @@ export default function CategoriesDisplay({ categoriesArray }) {
           }}
           animate={{ scale, marginBottom }}
           transition={{ type: "spring", stiffness: 50 }}
+          onClick={()=> handleCategorySelect(category)}
         >
+          {/* change the name of this soon or figure out how to make it work w CategoryCard */}
           <ProductCard productData={category} />
         </motion.div>
       </SwiperSlide>
