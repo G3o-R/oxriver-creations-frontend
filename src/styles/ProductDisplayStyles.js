@@ -78,11 +78,6 @@ export const ProductCarouselWrapper = styled.div`
   z-index: 2;
   margin-top: -175px;
 
-  border-bottom: 4px solid #ffffff; 
-  border-bottom-left-radius: 35%;
-  border-bottom-right-radius: 35%;
-  /* box-shadow */
-
   @media screen and (min-width: 1080px) {
     margin-top: -150px;
   }

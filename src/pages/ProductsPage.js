@@ -6,11 +6,12 @@ import {
 
 export default function Products({categoriesArray}) {
 
-  const categoriesToDisplay = categoriesArray.map((category) => <ProductDisplay key={category.id} category={category}/>)
+  // const categoriesToDisplay = categoriesArray.map((category) => <ProductDisplay key={category.id} category={category}/>)
 
   return (
     <ProductsPage>
-      {categoriesToDisplay[0]}
+      {/* {categoriesToDisplay[0]} */}
+      <ProductDisplay categoriesArray={categoriesArray} />
     </ProductsPage>
   );
 }

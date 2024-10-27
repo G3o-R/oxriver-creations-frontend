@@ -7,29 +7,13 @@ import {
   ProductDisplayContainer,
   ProductDisplayWrapper,
 } from "../styles/ProductDisplayStyles";
-import ProductCard from "./ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import "swiper/css";
+import ProductCard from "./ProductCard";
 
-export default function ProductDisplay({ category }) {
-  const { image, name, products } = category;
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-      const handleResize = () => {
-          setViewportWidth(window.innerWidth);
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-          window.removeEventListener("resize", handleResize);
-      };
-  }, []);
-  console.log(viewportWidth)
-
+export default function ProductDisplay({ categoriesArray }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -42,14 +26,14 @@ export default function ProductDisplay({ category }) {
   function handleSlideChange(swiper) {
     setCurrentIndex(swiper.activeIndex);
   }
-
-  const productsToDisplay = products.map((product, index) => {
+  const doubledCategoryArray = categoriesArray.concat(categoriesArray)
+  const categoriesToDisplay = doubledCategoryArray.map((category, index) => {
     const distanceFromCenter = Math.abs(currentIndex + 2 - index);
     const scale = 1 - 0.1 * distanceFromCenter;
     const marginBottom = 20 + distanceFromCenter * 25;
 
     return (
-      <SwiperSlide key={product.id}>
+      <SwiperSlide key={index}>
         <motion.div
           style={{
             originX: 0.5,
@@ -58,7 +42,7 @@ export default function ProductDisplay({ category }) {
           animate={{ scale, marginBottom }}
           transition={{ type: "spring", stiffness: 50 }}
         >
-          <ProductCard productData={product} />
+          <ProductCard productData={category} />
         </motion.div>
       </SwiperSlide>
     );
@@ -69,9 +53,14 @@ export default function ProductDisplay({ category }) {
       <ProductDisplayContainer>
         <ImageWrapper>
           <ImageContainer>
-            <img src={image} alt="don't know yet" />
+            <img
+              src={
+                "https://www.shutterstock.com/shutterstock/photos/2522618959/display_1500/stock-photo-photo-restaurant-equipment-modern-industrial-kitchen-with-furniture-window-2522618959.jpg"
+              }
+              alt="don't know yet"
+            />
             <Overlay>
-              <h1>{name}</h1>
+              <h1>text here</h1>
             </Overlay>
           </ImageContainer>
         </ImageWrapper>
@@ -83,7 +72,7 @@ export default function ProductDisplay({ category }) {
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >
-              {productsToDisplay}
+              {categoriesToDisplay}
             </Swiper>
           </ProductCarouselContainer>
         </ProductCarouselWrapper>
