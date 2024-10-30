@@ -11,11 +11,23 @@ export const CardWrapper = styled.div`
   aspect-ratio: 3/5;
   background-color: #2e2e2e;
   padding: 5px;
-  margin: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
+
+  &.small{
+    aspect-ratio: 1/1;
+    /* max-width: 120px; */
+    width: 100%;
+  }
+
+  &.display{
+    flex-direction: row;
+    /* max-width: 400px; */
+    aspect-ratio: 5/3;
+    max-width: 100%;
+  }
 
   &:hover {
     background-color: #575a65;

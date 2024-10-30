@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import ProductCard from "./ProductCard";
 
-export default function CategoriesDisplay({ categoriesArray, handleCategorySelect }) {
+export default function CategoriesDisplay({ categoriesArray, handleCategorySelect, selectedCategory }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -50,19 +50,19 @@ export default function CategoriesDisplay({ categoriesArray, handleCategorySelec
     );
   });
 
+  // const nameThisVarLater = selectedCategory ? selectedCategory.image : 
+
   return (
     <CategoryDisplayWrapper>
       <CategoryDisplayContainer>
         <ImageWrapper>
           <ImageContainer>
             <img
-              src={
-                "https://www.shutterstock.com/shutterstock/photos/2522618959/display_1500/stock-photo-photo-restaurant-equipment-modern-industrial-kitchen-with-furniture-window-2522618959.jpg"
-              }
+              src={selectedCategory.image}
               alt="don't know yet"
             />
             <Overlay>
-              <h1>text here</h1>
+              <h1>{selectedCategory.name}</h1>
             </Overlay>
           </ImageContainer>
         </ImageWrapper>
