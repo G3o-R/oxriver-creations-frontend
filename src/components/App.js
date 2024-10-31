@@ -12,8 +12,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3001/resources")
-    // fetch("/.netlify/functions/getResources")
+    // fetch("http://localhost:3001/resources")
+    fetch("/.netlify/functions/getResources")
         .then((res) => res.json())
         .then((data) => {
             setCategoriesArray(data.categories)
