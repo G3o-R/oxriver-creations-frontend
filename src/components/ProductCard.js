@@ -5,8 +5,8 @@ export default function ProductCard({
   handleProductSelect,
   type = "",
 }) {
-  const { image } = productData;
-// console.error
+  // const { image } = productData;
+console.log(productData)
   return (
     <CardWrapper
       className={`product-card ${type} ${productData.id}`}
@@ -19,7 +19,7 @@ export default function ProductCard({
       }
     >
       <CardContainer>
-        <img src={image} alt="random text here" loading="lazy" />
+        <img src={productData.image} alt="random text here" loading="lazy" />
       </CardContainer>
     </CardWrapper>
   );
