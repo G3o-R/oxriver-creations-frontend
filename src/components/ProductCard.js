@@ -6,7 +6,7 @@ export default function ProductCard({
   type = "",
 }) {
   const { image } = productData;
-
+// console.error
   return (
     <CardWrapper
       className={`product-card ${type} ${productData.id}`}

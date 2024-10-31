@@ -67,7 +67,7 @@ export default function Products({ categoriesArray }) {
             </TextContainer>
           </TextWrapper>
           {selectedCategory.products.length > 0 ? <ProductCard
-            productData={selectedCategory.products.find((product) => product.id === productID)}
+            productData={productToDisplay}
             type="display"
           />: null}
           <motion.div
@@ -77,7 +77,7 @@ export default function Products({ categoriesArray }) {
             <DynamicContainer ref={containerRef}>
               <Grid>
                 {selectedCategory?.products.map((product) => (
-                  <ProductCard productData={product} handleProductSelect={handleProductSelect} type="small" />
+                  <ProductCard key={product.id} productData={product} handleProductSelect={handleProductSelect} type="small" />
                 ))}
               </Grid>
             </DynamicContainer>
