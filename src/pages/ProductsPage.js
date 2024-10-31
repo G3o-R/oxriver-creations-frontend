@@ -27,6 +27,8 @@ export default function Products({ categoriesArray }) {
 
   function handleCategorySelect(categoryObj) {
     setSelectedCategory(categoryObj);
+    console.log("selecting category")
+    console.log(categoryObj)
   }
 
   function handleProductSelect(selectedProductID){
