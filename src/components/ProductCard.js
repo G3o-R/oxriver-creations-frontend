@@ -9,6 +9,8 @@ export default function ProductCard({
   productData,
   type = "",
 }) {
+
+  console.log(productData)
   
   return (
     <>
