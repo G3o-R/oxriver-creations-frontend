@@ -58,7 +58,7 @@ export default function CategoriesDisplay({ categoriesArray, handleCategorySelec
         <ImageWrapper>
           <ImageContainer>
             <img
-              src={selectedCategory.image}
+              src={selectedCategory.cover_photo}
               alt="don't know yet"
             />
             <Overlay>

@@ -9,6 +9,7 @@ export default function ProductCard({
   productData,
   type = "",
 }) {
+  
   return (
     <>
       <CardWrapper className={`product-card ${type} ${productData.id}`}>
@@ -16,7 +17,7 @@ export default function ProductCard({
           <ImageWrapper>
             <ImageContainer>
               <img
-                src={productData.image}
+                src={productData.cover_photo}
                 alt="random text here"
                 loading="lazy"
               />
