@@ -1,26 +1,31 @@
-import { CardContainer, CardWrapper } from "../styles/ProductCardStyles";
+import {
+  CardContainer,
+  CardWrapper,
+  ImageContainer,
+  ImageWrapper,
+} from "../styles/ProductCardStyles";
 
 export default function ProductCard({
   productData,
-  handleProductSelect,
   type = "",
 }) {
-  // const { image } = productData;
-console.log(productData)
   return (
-    <CardWrapper
-      className={`product-card ${type} ${productData.id}`}
-      onClick={
-        type === "small"
-          ? () => {
-              handleProductSelect(productData.id);
-            }
-          : null
-      }
-    >
-      <CardContainer>
-        <img src={productData.image} alt="random text here" loading="lazy" />
-      </CardContainer>
-    </CardWrapper>
+    <>
+      <CardWrapper className={`product-card ${type} ${productData.id}`}>
+        <CardContainer>
+          <ImageWrapper>
+            <ImageContainer>
+              <img
+                src={productData.image}
+                alt="random text here"
+                loading="lazy"
+              />
+            </ImageContainer>
+          </ImageWrapper>
+        </CardContainer>
+      </CardWrapper>
+
+      
+    </>
   );
 }

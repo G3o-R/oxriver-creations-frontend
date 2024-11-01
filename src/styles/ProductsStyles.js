@@ -24,7 +24,7 @@ export const HeaderContainer = styled.div`
 
 export const ContentWrapper = styled.div`
   width: 100%;
-  max-width: 725px;
+  /* max-width: 725px; */
 `;
 
 export const ContentContainer = styled.div`
@@ -37,6 +37,8 @@ export const TextWrapper = styled.div`
   background-color: #2e2e2e;
   border-radius: 12px;
   margin-bottom: 40px;
+  /* max-width: 725px; */
+  /* width: 100%; */
   `;
 
 export const TextContainer = styled.div`

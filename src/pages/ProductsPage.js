@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CategoriesDisplay from "../components/CategoriesDisplay";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import {
   DynamicContainer,
   ProductsPage,
@@ -13,6 +13,7 @@ import {
   TextContainer,
 } from "../styles/ProductsStyles";
 import ProductCard from "../components/ProductCard";
+import ProductsSlider from "../components/ProductsSlider";
 
 export default function Products({ categoriesArray }) {
   const [selectedCategory, setSelectedCategory] = useState({
@@ -22,24 +23,15 @@ export default function Products({ categoriesArray }) {
     products: [],
   });
   const [productID, setProductID] = useState(0);
-  const containerRef = useRef(null);
   const [containerHeight, setContainerHeight] = useState(0);
 
   function handleCategorySelect(categoryObj) {
     setSelectedCategory(categoryObj);
-    console.log("selecting category")
-    console.log(categoryObj)
   }
 
   function handleProductSelect(selectedProductID){
     setProductID(selectedProductID)
   }
-
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerHeight(containerRef.current.scrollHeight);
-    }
-  }, [selectedCategory]);
 
   useEffect(() => {
     if (categoriesArray) {
@@ -68,22 +60,8 @@ export default function Products({ categoriesArray }) {
               <p>For orders or other inquiries contact us at <span>oxriver@gmail.com</span></p>
             </TextContainer>
           </TextWrapper>
-          {selectedCategory.products.length > 0 ? <ProductCard
-            productData={productToDisplay}
-            type="display"
-          />: null}
-          <motion.div
-            animate={{ height: containerHeight }}
-            transition={{ duration: 0.5 }}
-          >
-            <DynamicContainer ref={containerRef}>
-              <Grid>
-                {selectedCategory?.products.map((product) => (
-                  <ProductCard key={product.id} productData={product} handleProductSelect={handleProductSelect} type="small" />
-                ))}
-              </Grid>
-            </DynamicContainer>
-          </motion.div>
+          {/* products will go below */}
+          <ProductsSlider productsArray={categoriesArray[0].products}/>
         </ContentContainer>
       </ContentWrapper>
     </ProductsPage>
