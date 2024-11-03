@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import ProductCard from "./ProductCard";
+import ProductOverlayDisplay from "./ProductOverlayDisplay";
 import "swiper/css";
 import {
   HeaderContainer,
@@ -11,7 +12,7 @@ import {
   SliderContainer,
 } from "../styles/ProductSliderStyles";
 
-export default function ProductsSlider({ productsArray, settings, title }) {
+export default function ProductsSlider({ productsArray, settings, title = "Title Here" }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -42,18 +43,18 @@ export default function ProductsSlider({ productsArray, settings, title }) {
       <Container>
         <HeaderWrapper>
           <HeaderContainer>
-            <h1>Header here</h1>
+            <h1>{title}</h1>
           </HeaderContainer>
         </HeaderWrapper>
         <SliderWrapper>
-          <SliderContainer>
+          <SliderContainer id="slider-container">
             <Swiper
-              spaceBetween={0}
-              slidesPerView={4.5}
+              loop={true}
+              spaceBetween={20}
+              slidesPerView={6.5}
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >
-                {/* array here */}
                 {productsToDisplay}
             </Swiper>
           </SliderContainer>

@@ -44,7 +44,7 @@ export default function CategoriesDisplay({ categoriesArray, handleCategorySelec
           onClick={()=> handleCategorySelect(category)}
         >
           {/* change the name of this soon or figure out how to make it work w CategoryCard */}
-          <ProductCard productData={category} />
+          <ProductCard productData={category} type="category" />
         </motion.div>
       </SwiperSlide>
     );

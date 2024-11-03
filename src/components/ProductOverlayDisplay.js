@@ -14,18 +14,21 @@ import {
  } from "../styles/ProductOverlayDisplayStyles";
 
 
-export default function ProductOverlayDisplay(){
+export default function ProductOverlayDisplay({isActive, productData, onClose}){
+    console.log(productData)
+
+    // const {photo_array} = productData
 
     return(
-        <OverlayContainer>
-            <CloseBtn>x</CloseBtn>
+        <OverlayContainer className={`overlay-container ${isActive ? "active" : ""}`}>
+            <CloseBtn onClick={onClose}>x</CloseBtn>
             <DisplayWrapper>
                 <DisplayContainer>
                     <ContentWrapper>
                         <ContentContainer>
                             <ImageWrapper>
                                 <ImageContainer>
-                                    <img src="" alt="random text" />
+                                    <img src={"https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-800x450.webp"} alt="random text" />
                                 </ImageContainer>
                             </ImageWrapper>
                             <DescriptionWrapper>
