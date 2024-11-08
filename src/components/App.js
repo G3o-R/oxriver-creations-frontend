@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Navbar from './Navbar';
 import Services from '../pages/Services';
-import ProductsPage from '../pages/ProductsPage';
+import ProductPageTwo from '../pages/ProductPageTwo';
 
 function App() {
   const [categoriesArray, setCategoriesArray] = useState([])
@@ -34,7 +34,7 @@ if (isLoading){
       <Navbar />
         <Routes>
           <Route path='/' element={<Home categoriesArray={categoriesArray} bestSellersArray={bestSellersArray}/>} />
-          <Route path="/products" element={<ProductsPage categoriesArray={categoriesArray} />} />
+          <Route path="/products" element={<ProductPageTwo categoriesArray={categoriesArray} />} />
           <Route path="services" element={<Services />} />
         </Routes>
       </BrowserRouter>
