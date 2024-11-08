@@ -35,8 +35,8 @@ export default function Products({ categoriesArray }) {
 
   useEffect(() => {
     if (categoriesArray) {
-      setSelectedCategory(categoriesArray[0]);
-      setProductID(categoriesArray[0].products[0].id)
+      // setSelectedCategory(categoriesArray[0]);
+      // setProductID(categoriesArray[0].products[0].id)
     }
   }, []);
   let productToDisplay = selectedCategory.products.find((product) => product.id === productID)
@@ -61,7 +61,7 @@ export default function Products({ categoriesArray }) {
             </TextContainer>
           </TextWrapper>
           {/* products will go below */}
-          <ProductsSlider productsArray={categoriesArray[0].products}/>
+          {/* <ProductsSlider productsArray={categoriesArray[0].products}/> */}
         </ContentContainer>
       </ContentWrapper>
     </ProductsPage>

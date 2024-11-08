@@ -7,162 +7,156 @@ exports.handler = async (event, context) => {
         id: 1,
         cover_photo:
           "https://www.shutterstock.com/shutterstock/photos/2522618959/display_1500/stock-photo-photo-restaurant-equipment-modern-industrial-kitchen-with-furniture-window-2522618959.jpg",
-        name: "Kitchen Ware",
-        products: [
+        name: "Crafts",
+        sub_categories: [
           {
+            name: "crafts",
             id: 1,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 2,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 3,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 4,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 5,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 6,
-            cover_photo:
-              "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 7,
-            cover_photo:
-              "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 8,
-            cover_photo:
-              "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 9,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 10,
-            cover_photo:
-              "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 11,
-            cover_photo:
-              "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 12,
-            cover_photo:
-              "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 13,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
+            products_array: [
+              {
+                id: 1,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 2,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 3,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 4,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 5,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 6,
+                cover_photo:
+                  "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 7,
+                cover_photo:
+                  "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 8,
+                cover_photo:
+                  "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 9,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 10,
+                cover_photo:
+                  "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 11,
+                cover_photo:
+                  "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 12,
+                cover_photo:
+                  "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
             ],
           },
         ],
@@ -172,345 +166,383 @@ exports.handler = async (event, context) => {
         cover_photo:
           "https://www.shutterstock.com/shutterstock/photos/2483144443/display_1500/stock-photo-row-of-colorful-d-printing-filament-pla-material-on-environmentally-friendly-and-recyclable-paper-2483144443.jpg",
         name: "3D Prints",
-        products: [
+        sub_categories: [
           {
+            name: "Dragons",
             id: 1,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
+            products_array: [
+              {
+                id: 1,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 2,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 3,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 4,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 5,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 6,
+                cover_photo:
+                  "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 7,
+                cover_photo:
+                  "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 8,
+                cover_photo:
+                  "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 9,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 10,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
             ],
           },
           {
+            name: "Cows",
             id: 2,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
+            products_array: [
+              {
+                id: 1,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 2,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 3,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 4,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 5,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 6,
+                cover_photo:
+                  "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 7,
+                cover_photo:
+                  "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 8,
+                cover_photo:
+                  "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 9,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 10,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
             ],
           },
           {
+            name: "Fidget Toys",
             id: 3,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 4,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 5,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 6,
-            cover_photo:
-              "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 7,
-            cover_photo:
-              "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 8,
-            cover_photo:
-              "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 9,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-        ],
-      },
-      {
-        id: 3,
-        cover_photo:
-          "https://www.shutterstock.com/shutterstock/photos/2494702611/display_1500/stock-photo-young-berded-man-speaking-on-a-business-training-standing-in-office-during-a-conference-or-seminar-2494702611.jpg",
-        name: "Business Needs",
-        products: [
-          {
-            id: 1,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 2,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 3,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 4,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 5,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 6,
-            cover_photo:
-              "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 7,
-            cover_photo:
-              "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 8,
-            cover_photo:
-              "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 9,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-        ],
-      },
-      {
-        id: 4,
-        cover_photo:
-          "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-        name: "Ur Mom",
-        products: [
-          {
-            id: 1,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 2,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 3,
-            cover_photo:
-              "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 4,
-            cover_photo:
-              "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 5,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 6,
-            cover_photo:
-              "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 7,
-            cover_photo:
-              "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 8,
-            cover_photo:
-              "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-            ],
-          },
-          {
-            id: 9,
-            cover_photo:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
-            photo_array: [
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
-              placeHolderPhoto,
+            products_array: [
+              {
+                id: 1,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 2,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 3,
+                cover_photo:
+                  "https://facfox.com/wp-content/uploads/2020/10/3d-printed-pumpkin-spider-transf-gigapixel-scale-2_00x.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 4,
+                cover_photo:
+                  "https://www.weddingfavorites.com/mm5/graphics/00000001/EB3242CTW_large1a.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 5,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 6,
+                cover_photo:
+                  "https://www.lazeredge.com/cdn/shop/products/custom-wedding-coaster-ill-drink-to-that-custom-names-and-date-coaster-shop-lazeredge-561774_600x.jpg?v=1631900833",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 7,
+                cover_photo:
+                  "https://reddirthatco.com/wp-content/uploads/2023/04/best-sellers.jpg",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 8,
+                cover_photo:
+                  "https://www.megagear.com/cdn/shop/files/Adsiztasarim-37_800x.jpg?v=1708394067",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 9,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
+              {
+                id: 10,
+                cover_photo:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBL1k_Ex-4nD3XSg7doLGkBb-Xa4YA9lul_w&s",
+                photo_array: [
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                  placeHolderPhoto,
+                ],
+              },
             ],
           },
         ],
@@ -520,7 +552,7 @@ exports.handler = async (event, context) => {
       {
         id: 17,
         image:
-          "https://i5.walmartcover_photos.com/seo/3D-Printed-Action-Figure-5-54-inch-Dummy-Full-Body-Mechanical-Movable-Toy-Multiple-Accessories-Hand-Painted-Figure-Desk-Decoration-Weapons-Bracket-Ar_a0fba0b6-a613-4682-a1f3-f7b399ba6898.8ffdf9f780352d53aabbe319052f477f.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+          "https://i.etsystatic.com/6412120/r/il/241219/4941993618/il_570xN.4941993618_ang5.jpg",
         description:
           "Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus gravida auctor placerat ornare tempus libero vivamus mauris faucibus. Lacinia et bibendum duis lobortis aliquam senectus volutpat sollicitudin. Pulvinar sociosqu pretium vivamus litora laoreet.",
         name: "3d Samurai",

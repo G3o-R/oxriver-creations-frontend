@@ -18,7 +18,9 @@ import {
 } from "../styles/CategoriesCardStyles";
 
 export default function CategoriesCard({categoryData}){
-    const {image, name, products} = categoryData
+    console.log(categoryData)
+    // debugger
+    const {cover_photo, name, sub_categories} = categoryData
     const [isActive, setIsActive] = useState(false)
 
     return(
@@ -29,7 +31,7 @@ export default function CategoriesCard({categoryData}){
             <CardContainer>
                 <ImageWrapper>
                     <ImageContainer>
-                        <img src={image} alt="Product Image"/>
+                        <img src={cover_photo} alt="Product Image"/>
                     </ImageContainer>
                 </ImageWrapper>
                 <OverlayWrapper className={isActive ? "active" : "hidden"}>
@@ -39,17 +41,18 @@ export default function CategoriesCard({categoryData}){
                                 <CategoryTitle>{name}</CategoryTitle>
                             </TitleContainer>
                         </TitleWrapper>
-                        <MenuWrapper>
+                        {/* having subcategories messes this up a bit */}
+                        {/* <MenuWrapper>
                             <MenuContainer>
-                                {products.map((productOption) => 
+                                {sub_categories.map((productOption) => 
                                     (<MenuOption
                                      onClick={()=>console.log("go to selected product")} 
                                      key={productOption.id}>
-                                        <img src={productOption.image}/>
+                                        <img src={productOption.cover_photo}/>
                                         <OptionOverlay></OptionOverlay>
                                     </MenuOption>)).slice(0,4)}
                             </MenuContainer>
-                        </MenuWrapper>
+                        </MenuWrapper> */}
                     </OverlayContainer>
                 </OverlayWrapper>
             </CardContainer>

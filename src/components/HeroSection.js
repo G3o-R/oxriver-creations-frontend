@@ -59,7 +59,7 @@ export default function HeroSection(){
 
         <SlideWrapper
           className={activeIndex === 1 ? "active" : "inactive"}
-          id="slide-1"
+          id="slide-2"
         >
           <SlideBackground>
             <img src={paintingStockImg} alt="don't know yet" />
@@ -68,7 +68,7 @@ export default function HeroSection(){
 
         <SlideWrapper
           className={activeIndex === 2 ? "active" : "inactive"}
-          id="slide-1"
+          id="slide-3"
         >
           <SlideBackground>
             <img src={craftingBackgroundImg} alt="don't know yet" />
