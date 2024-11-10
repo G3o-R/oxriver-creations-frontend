@@ -17,9 +17,7 @@ import {
     TitleWrapper
 } from "../styles/CategoriesCardStyles";
 
-export default function CategoriesCard({categoryData}){
-    console.log(categoryData)
-    // debugger
+export default function CategoriesCard({categoryData, type = ""}){
     const {cover_photo, name, sub_categories} = categoryData
     const [isActive, setIsActive] = useState(false)
 
@@ -27,6 +25,7 @@ export default function CategoriesCard({categoryData}){
         <CardWrapper 
         onMouseEnter={()=> setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
+        className={type}
         >
             <CardContainer>
                 <ImageWrapper>

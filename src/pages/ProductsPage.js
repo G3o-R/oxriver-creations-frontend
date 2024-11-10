@@ -11,7 +11,7 @@ import {
   ContentContainer,
   TextWrapper,
   TextContainer,
-} from "../styles/ProductsStyles";
+} from "../styles/pageStyles/ProductsStyles";
 import ProductCard from "../components/ProductCard";
 import ProductsSlider from "../components/ProductsSlider";
 
@@ -35,11 +35,11 @@ export default function Products({ categoriesArray }) {
 
   useEffect(() => {
     if (categoriesArray) {
-      // setSelectedCategory(categoriesArray[0]);
-      // setProductID(categoriesArray[0].products[0].id)
+      setSelectedCategory(categoriesArray[0]);
+      setProductID(categoriesArray[0].products[0].id)
     }
   }, []);
-  let productToDisplay = selectedCategory.products.find((product) => product.id === productID)
+  // let productToDisplay = selectedCategory.products.find((product) => product.id === productID)
 
   return (
     <ProductsPage>

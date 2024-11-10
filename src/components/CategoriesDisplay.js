@@ -11,9 +11,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import "swiper/css";
-import ProductCard from "./ProductCard";
+import CategoriesCard from "./CategoriesCard";
 
-export default function CategoriesDisplay({ categoriesArray, handleCategorySelect, selectedCategory }) {
+export default function CategoriesDisplay({ categoriesArray = [], handleCategorySelect, selectedCategory }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -27,30 +27,31 @@ export default function CategoriesDisplay({ categoriesArray, handleCategorySelec
     setCurrentIndex(swiper.activeIndex);
   }
   const doubledCategoryArray = categoriesArray.concat(categoriesArray)
-  const categoriesToDisplay = doubledCategoryArray.map((category, index) => {
-    const distanceFromCenter = Math.abs(currentIndex + 2 - index);
+  const categoriesToDisplay = categoriesArray.map((category, index) => {
+    const distanceFromCenter = Math.abs(currentIndex + 1 - index);
     const scale = 1 - 0.1 * distanceFromCenter;
     const marginBottom = 20 + distanceFromCenter * 25;
-
+    const zIndex = 3 - distanceFromCenter;
+  
     return (
       <SwiperSlide key={index}>
         <motion.div
           style={{
             originX: 0.5,
             originY: 0.5,
+            zIndex,
+            position: 'relative',
           }}
           animate={{ scale, marginBottom }}
           transition={{ type: "spring", stiffness: 50 }}
-          onClick={()=> handleCategorySelect(category)}
+          onClick={() => handleCategorySelect(category)}
         >
-          {/* change the name of this soon or figure out how to make it work w CategoryCard */}
-          <ProductCard productData={category} type="category" />
+          <CategoriesCard categoryData={category} type="landscape" />
         </motion.div>
       </SwiperSlide>
     );
   });
 
-  // const nameThisVarLater = selectedCategory ? selectedCategory.image : 
 
   return (
     <CategoryDisplayWrapper>
@@ -70,7 +71,7 @@ export default function CategoriesDisplay({ categoriesArray, handleCategorySelec
           <CategoryCarouselContainer>
             <Swiper
               spaceBetween={-50}
-              slidesPerView={window.innerWidth < 768 ? 3 : 5}
+              slidesPerView={3}
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >

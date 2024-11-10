@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import About from "../components/About";
 import Footer from "../components/Footer";
-import { HomePage } from "../styles/HomeStyles";
+import { HomePage } from "../styles/pageStyles/HomeStyles";
 import SliderSection from "../components/SliderSection";
 import HeroSection from "../components/HeroSection";
 
@@ -14,11 +14,13 @@ export default function Home({categoriesArray, bestSellersArray}){
         type: "BestSellers"
     }
 
+    const doubledCategoryArray = categoriesArray.concat(categoriesArray)
+
     return(
     <HomePage>
         <HeroSection className="this-is-a-test"/>
         <SliderSection productsArray={bestSellersArray} title="Best Sellers" settings={settingsBestSeller}/>
-        <SliderSection productsArray={categoriesArray} title="Products"/>
+        <SliderSection productsArray={doubledCategoryArray} title="Products"/>
         <About />
         <Footer />
     </HomePage>

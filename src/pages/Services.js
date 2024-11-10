@@ -11,7 +11,7 @@ import {
   ServicesContainer,
   ServicesPage,
   ServicesWrapper,
-} from "../styles/ServicesPageStyles";
+} from "../styles/pageStyles/ServicesPageStyles";
 
 export default function Services() {
   return (

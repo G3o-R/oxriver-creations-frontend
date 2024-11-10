@@ -547,6 +547,13 @@ exports.handler = async (event, context) => {
           },
         ],
       },
+      {
+        id: 3,
+        cover_photo:
+          "https://www.shutterstock.com/shutterstock/photos/2463474777/display_1500/stock-photo-man-programmer-and-coding-at-night-on-laptop-mockup-screen-for-networking-malware-or-software-at-2463474777.jpg",
+        name: "Web Development",
+        sub_categories: [],
+      }
     ],
     best_sellers: [
       {
