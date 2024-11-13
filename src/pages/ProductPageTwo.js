@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import CategoriesDisplay from "../components/CategoriesDisplay";
 import { ProductsPage } from "../styles/pageStyles/ProductPageTwoStyles";
+import ProductsSection from "../components/ProductsSection";
 
 export default function ProductPageTwo({ categoriesArray }) {
   const [selectedCategory, setSelectedCategory] = useState({
@@ -9,6 +10,7 @@ export default function ProductPageTwo({ categoriesArray }) {
     name: "",
     sub_categories: [],
   });
+
   const [subCategoryID, setSubCategoryID] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
 
@@ -35,6 +37,9 @@ export default function ProductPageTwo({ categoriesArray }) {
         selectedCategory={selectedCategory}
       />
 
+      {selectedCategory.id && (
+        <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
+      )}
     </ProductsPage>
   );
 }

@@ -5,14 +5,13 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 175px;
+  max-width: 400px;
   width: 100%;
   height: 100%;
   aspect-ratio: 3/5;
   background-color: #2e2e2e;
-  padding: 5px;
+  padding: 1px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -31,7 +30,7 @@ export const CardWrapper = styled.div`
     max-width: 100%;
   }
 
-  @media screen and (min-width: 1080px) {
+  /* @media screen and (min-width: 1080px) {
     max-width: 200px;
   }
 
@@ -41,7 +40,7 @@ export const CardWrapper = styled.div`
 
   @media screen and (min-width: 1560px) {
     max-width: 300px;
-  }
+  } */
 `;
 
 export const CardContainer = styled.div`
@@ -49,16 +48,21 @@ export const CardContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
   overflow: hidden;
   position: relative;
+`;
+
+export const ProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
   `;
 
 export const ImageContainer = styled.div`

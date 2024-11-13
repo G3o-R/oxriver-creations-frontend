@@ -27,7 +27,6 @@ if (isLoading){
       <div>loading please wait</div>
   )
 }
-console.log(categoriesArray)
 
   return (
     <div className="App">

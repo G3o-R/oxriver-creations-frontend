@@ -12,7 +12,7 @@ import {
   SliderContainer,
 } from "../styles/ProductSliderStyles";
 
-export default function ProductsSlider({ productsArray, settings, title = "Title Here" }) {
+export default function ProductsSlider({ pairedProductsArray, settings, title = "Title Here" }) {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -32,9 +32,9 @@ export default function ProductsSlider({ productsArray, settings, title = "Title
     }
   }
 
-  const productsToDisplay = productsArray.map((product) => (
-    <SwiperSlide key={product.id}>
-        <ProductCard productData={product}  />
+  const productsToDisplay = pairedProductsArray.map((productPair, index) => (
+    <SwiperSlide key={index}>
+        <ProductCard productPairData={productPair}  />
     </SwiperSlide>
   ))
 
@@ -49,9 +49,9 @@ export default function ProductsSlider({ productsArray, settings, title = "Title
         <SliderWrapper>
           <SliderContainer id="slider-container">
             <Swiper
-              loop={true}
-              spaceBetween={20}
-              slidesPerView={6.5}
+              // loop={true}
+              spaceBetween={0}
+              slidesPerView={6}
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >
