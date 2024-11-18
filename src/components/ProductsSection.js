@@ -21,7 +21,7 @@ export default function ProductsSection({ subCategoriesArr = [] }) {
       arr.push(productPair);
     }
     return (
-      <SubSectionWrapper className="subsection-container">
+      <SubSectionWrapper key={subCategory.id} className="subsection-container">
         <SubCategorySection>
           <SubCategoryHeader>
             <h1>Name Here</h1>
@@ -36,9 +36,7 @@ export default function ProductsSection({ subCategoriesArr = [] }) {
 
   return (
   <DynamicContainer>
-    {/* whats wrapped in here should be for each subcategory */}
     {subCategoriesToDisplay}
-    {/* whats wrapped in here should be for each subcategory */}
-      </DynamicContainer>
+  </DynamicContainer>
   );
 }

@@ -11,11 +11,18 @@ import ProductOverlayDisplay from "./ProductOverlayDisplay";
 
 export default function ProductCard({ productPairData, type = "" }) {
   const [isActive, setIsActive] = useState(false);
-  console.log(productPairData)
+  const [selectedProduct, setSelectedProduct] = useState({
 
-  // const sliderContainer = document.getElementById("slider-container")
+  })
+
+  const sliderContainer = document.getElementById("slider-container")
+
+  function handleProductSelect(product){
+    setIsActive(true)
+    setSelectedProduct(product)
+  }
   const productsToDisplay = productPairData.map((product) => (
-    <ProductContainer className="product-container">
+    <ProductContainer key={product.id} className="product-container" onClick={()=>handleProductSelect(product)}>
       <ImageWrapper>
         <ImageContainer>
           <img src={product.cover_photo} alt="Product Cover Photo" />
@@ -32,11 +39,11 @@ export default function ProductCard({ productPairData, type = "" }) {
         </CardContainer>
       </CardWrapper>
 
-        {/* { isActive ? createPortal (<ProductOverlayDisplay
+        { isActive ? createPortal (<ProductOverlayDisplay
           isActive={isActive}
-          productData={productData}
+          productData={selectedProduct}
           onClose={() => setIsActive(false)}
-        />, sliderContainer) : null } */}
+        />, sliderContainer) : null }
     </>
   );
 }

@@ -65,19 +65,19 @@ export const DisplayContainer = styled.div`
 
 export const ContentWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
   text-align: center;
 `;
 
-export const ImageWrapper = styled.div`
+export const DisplayedImageWrapper = styled.div`
   width: 100%;
   height: 300px;
   overflow: hidden;
@@ -85,10 +85,10 @@ export const ImageWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-export const ImageContainer = styled.div`
+export const DisplayedImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -98,7 +98,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const DescriptionWrapper = styled.div`
-  width: 100%;
+  width: 30%;
   padding: 20px;
 `;
 
@@ -119,6 +119,7 @@ export const DescriptionContainer = styled.div`
 
 export const PhotoSlidesWrapper = styled.div`
   width: 100%;
+  height: 90px;
   padding: 10px;
   display: flex;
   overflow-x: auto;
@@ -127,13 +128,32 @@ export const PhotoSlidesWrapper = styled.div`
 export const PhotoSlidesContainer = styled.div`
   display: flex;
   gap: 10px;
+  width: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+`;
+
+export const ImageContainer = styled.div`
   img {
-    width: 100px;
+    width: 100%;
     height: 75px;
     object-fit: cover;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     transition: transform 0.3s ease;
-    
+
     &:hover {
       transform: scale(1.05);
     }
