@@ -52,8 +52,8 @@ export default function SliderSection({productsArray, title, settings = {}}){
     
     
     // have to add an ID to the objects for the keys
-    const productsToDisplay = productsArray.map((product) => (
-        <SwiperSlide key={product.id}>
+    const productsToDisplay = productsArray.map((product, index) => (
+        <SwiperSlide key={index}>
     {type === "BestSellers" ? (
         <BestSellerCard image={product.image} description={product.description} />
     ) : (
@@ -86,7 +86,7 @@ return (
       <ContentWrapper>
         <ContentContainer>
           <Swiper
-            spaceBetween={0}
+            spaceBetween={20}
             slidesPerView={slidesPerView}
             onSwiper={handleSwiperInit}
             onSlideChange={handleSlideChange}

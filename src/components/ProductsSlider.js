@@ -49,7 +49,7 @@ export default function ProductsSlider({ pairedProductsArray, settings, title = 
         <SliderWrapper>
           <SliderContainer id="slider-container">
             <Swiper
-              // loop={true}
+              loop={true}
               spaceBetween={0}
               slidesPerView={5}
               onSwiper={handleSwiperInit}

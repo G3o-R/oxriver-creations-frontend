@@ -9,9 +9,7 @@ export const CardWrapper = styled.div`
   max-width: 450px;
   aspect-ratio: 3/5;
   background-color: #2e2e2e;
-  padding: 5px;
-  margin: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 5px #2e2e2e;
   border-radius: 12px;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
@@ -20,36 +18,41 @@ export const CardWrapper = styled.div`
     background-color: #575a65;
   }
 
-  &.landscape {
+  &.product-page {
     max-width: 300px;
+
+    @media screen and (min-width: 960px) {
+      aspect-ratio: 5/3;
+      max-width: 400px;
+    }
     
     @media screen and (min-width: 1100px) {
-        max-width: 350px;
-        aspect-ratio: 5/3;
+      max-width: 425px;
+      /* aspect-ratio: 5/3; */
     }
 
     @media screen and (min-width: 1175px) {
-      max-width: 375px;
-    }
-
-    @media screen and (min-width: 1250px) {
-      max-width: 400px;
-    }
-
-    @media screen and (min-width: 1325px) {
-      max-width: 425px;
-    }
-
-    @media screen and (min-width: 1400px) {
       max-width: 450px;
     }
 
-    @media screen and (min-width: 1475px) {
+    @media screen and (min-width: 1250px) {
       max-width: 475px;
     }
 
-    @media screen and (min-width: 1560px) {
+    @media screen and (min-width: 1325px) {
       max-width: 500px;
+    }
+
+    @media screen and (min-width: 1400px) {
+      max-width: 525px;
+    }
+
+    /* @media screen and (min-width: 1475px) {
+      max-width: 500px;
+    } */
+
+    @media screen and (min-width: 1475px) {
+      max-width: 550px;
     }
   }
 `;

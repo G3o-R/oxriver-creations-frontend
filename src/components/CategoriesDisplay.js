@@ -7,6 +7,7 @@ import {
   CategoryDisplayContainer,
   CategoryDisplayWrapper,
 } from "../styles/CategoriesDisplayStyles";
+import { useMediaQuery } from 'react-responsive'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
@@ -17,6 +18,9 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
+  const isLarge = useMediaQuery({
+    query: '(min-width: 550px)'
+  })
 
   const handleSwiperInit = (swiper) => {
     swiperRef.current = swiper;
@@ -28,30 +32,39 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
   }
   const doubledCategoryArray = categoriesArray.concat(categoriesArray)
   const categoriesToDisplay = categoriesArray.map((category, index) => {
-    const distanceFromCenter = Math.abs(currentIndex + 1 - index);
+    const distanceFromCenter = Math.abs(currentIndex + 0 - index);
     const scale = 1 - 0.1 * distanceFromCenter;
     const marginBottom = 20 + distanceFromCenter * 25;
     const zIndex = 3 - distanceFromCenter;
   
     return (
-      <SwiperSlide key={index}>
+      <SwiperSlide
+        key={index}
+        style={{
+          zIndex,
+          transition: 'z-index 0.3s ease',
+        }}
+      >
         <motion.div
           style={{
             originX: 0.5,
             originY: 0.5,
-            zIndex,
             position: 'relative',
           }}
           animate={{ scale, marginBottom }}
           transition={{ type: "spring", stiffness: 50 }}
           onClick={() => handleCategorySelect(category)}
         >
-          <CategoriesCard categoryData={category} type="landscape" />
+          <CategoriesCard
+           categoryData={category}
+           index={index} 
+           currentIndex={currentIndex}
+           type="product-page"            
+           />
         </motion.div>
       </SwiperSlide>
     );
   });
-
 
   return (
     <CategoryDisplayWrapper>
@@ -67,11 +80,13 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
             </Overlay>
           </ImageContainer>
         </ImageWrapper>
-        <CategoryCarouselWrapper>
-          <CategoryCarouselContainer>
+        <CategoryCarouselWrapper className="carousel-wrapper">
+          <CategoryCarouselContainer className="carousel-container">
             <Swiper
               spaceBetween={-50}
-              slidesPerView={3}
+              slidesPerView={isLarge ? 3 : 2}
+              centeredSlides={true}
+              initialSlide={1}
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >

@@ -74,22 +74,25 @@ export const CategoryCarouselWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   width: 100%;
+  /* padding-right: 20px; */
+  /* margin-right: 24px;  */
   padding: 0;
   z-index: 2;
-  margin-top: -175px;
+  margin-top: -250px;
 
   @media screen and (min-width: 1080px) {
-    margin-top: -150px;
+    margin-top: -200px;
   }
     
   @media screen and (min-width: 1325px) {
-    margin-top: -125px;
+    margin-top: -175px;
   }
     
   @media screen and (min-width: 1560px) {
-    margin-top: -100px;
+    margin-top: -150px;
   }
 `;
+
 
 export const CategoryCarouselContainer = styled.div`
   position: relative;
@@ -98,7 +101,7 @@ export const CategoryCarouselContainer = styled.div`
   width: 100%;
   height: 560px;
   display: flex;
-  
+  justify-content: center;
   .swiper {
       width: 100%;
       height: 100%;
