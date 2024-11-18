@@ -2,26 +2,25 @@ import { DynamicContainer, ProductSliderContainer, SubCategoryHeader, SubCategor
 import ProductsSlider from "./ProductsSlider";
 
 export default function ProductsSection({ subCategoriesArr = [] }) {
-  let arr = [];
-  let productPair = [];
-  if (subCategoriesArr.length > 0) {
-    subCategoriesArr[0].products_array.forEach((product) => {
-      productPair.push(product);
-
-      if (productPair.length === 2) {
-        arr.push(productPair);
-        productPair = [];
-      }
-    });
-  }
-
-  if (productPair.length > 0) {
-    arr.push(productPair);
-  }
-
-  return (
-  <DynamicContainer>
-    {/* whats wrapped in here should be for each subcategory */}
+  
+  const subCategoriesToDisplay = subCategoriesArr.map((subCategory) => {
+    let arr = [];
+    let productPair = [];
+    if (subCategoriesArr.length > 0) {
+      subCategory.products_array.forEach((product) => {
+        productPair.push(product);
+  
+        if (productPair.length === 2) {
+          arr.push(productPair);
+          productPair = [];
+        }
+      });
+    }
+  
+    if (productPair.length > 0) {
+      arr.push(productPair);
+    }
+    return (
       <SubSectionWrapper className="subsection-container">
         <SubCategorySection>
           <SubCategoryHeader>
@@ -32,6 +31,13 @@ export default function ProductsSection({ subCategoriesArr = [] }) {
           </ProductSliderContainer>
         </SubCategorySection>
       </SubSectionWrapper>
+    )
+  })
+
+  return (
+  <DynamicContainer>
+    {/* whats wrapped in here should be for each subcategory */}
+    {subCategoriesToDisplay}
     {/* whats wrapped in here should be for each subcategory */}
       </DynamicContainer>
   );

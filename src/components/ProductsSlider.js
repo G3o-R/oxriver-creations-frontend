@@ -51,7 +51,7 @@ export default function ProductsSlider({ pairedProductsArray, settings, title = 
             <Swiper
               // loop={true}
               spaceBetween={0}
-              slidesPerView={6}
+              slidesPerView={5}
               onSwiper={handleSwiperInit}
               onSlideChange={handleSlideChange}
             >
