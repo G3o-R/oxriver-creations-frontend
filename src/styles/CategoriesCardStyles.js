@@ -6,20 +6,24 @@ export const CardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 450px;
+  /* max-width: 300px; */
+  padding: 5px;
+  margin: 5px;
   aspect-ratio: 3/5;
   background-color: #2e2e2e;
-  box-shadow: 0 0 0 5px #2e2e2e;
   border-radius: 12px;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
-
+  
   &:hover {
     background-color: #575a65;
   }
-
+  
   &.product-page {
+    box-shadow: 0 0 0 5px #2e2e2e;
     max-width: 300px;
+    padding: 0;
+    margin: 0;
 
     @media screen and (min-width: 960px) {
       aspect-ratio: 5/3;

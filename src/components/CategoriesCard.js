@@ -44,7 +44,7 @@ export default function CategoriesCard({
         </ImageWrapper>
         <OverlayWrapper
           className={
-            isActive || (type === "product-page" && currentIndex == index && isLarge)
+            isActive || (currentIndex == index && isLarge)
               ? "active"
               : "hidden"
           }

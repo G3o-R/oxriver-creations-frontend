@@ -49,6 +49,20 @@ export default function SliderSection({productsArray, title, settings = {}}){
       slidesPerView = 4;
     }
     
+    const handleSwiperInit = (swiper) => {
+        swiperRef.current = swiper;
+        setSlidesLength(swiper.slides.length);
+    };
+    
+    function handleSlideChange(swiper){
+        setCurrentIndex(swiper.activeIndex)
+    }
+    
+    function handleSlideTo(index) {
+        if (swiperRef.current && swiperRef.current.slideTo) {
+            swiperRef.current.slideTo(index, 0);
+        }
+    }
     
     
     // have to add an ID to the objects for the keys
@@ -57,25 +71,11 @@ export default function SliderSection({productsArray, title, settings = {}}){
     {type === "BestSellers" ? (
         <BestSellerCard image={product.image} description={product.description} />
     ) : (
-        <CategoriesCard categoryData={product} />
+        <CategoriesCard categoryData={product} index={index} currentIndex={currentIndex} />
     )}
   </SwiperSlide>
 ));
 
-const handleSwiperInit = (swiper) => {
-    swiperRef.current = swiper;
-    setSlidesLength(swiper.slides.length);
-};
-
-function handleSlideChange(swiper){
-    setCurrentIndex(swiper.activeIndex)
-}
-
-function handleSlideTo(index) {
-    if (swiperRef.current && swiperRef.current.slideTo) {
-        swiperRef.current.slideTo(index, 0);
-    }
-}
 
 return (
   <Wrapper>
@@ -86,7 +86,7 @@ return (
       <ContentWrapper>
         <ContentContainer>
           <Swiper
-            spaceBetween={20}
+            spaceBetween={0}
             slidesPerView={slidesPerView}
             onSwiper={handleSwiperInit}
             onSlideChange={handleSlideChange}
@@ -104,8 +104,8 @@ return (
 
               return (
                 <li
-                  key={product.id}
-                  className={`nav-item-${index} ${
+                  key={index}
+                  className={`nav-item-${product.id} ${
                     isSelected ? "selected" : ""
                   }`}
                   onClick={() => handleSlideTo(index)}
