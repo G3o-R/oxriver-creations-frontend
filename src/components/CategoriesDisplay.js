@@ -6,13 +6,17 @@ import {
   CategoryCarouselWrapper,
   CategoryDisplayContainer,
   CategoryDisplayWrapper,
+  NavButton,
 } from "../styles/CategoriesDisplayStyles";
 import { useMediaQuery } from 'react-responsive'
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import "swiper/css";
 import CategoriesCard from "./CategoriesCard";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function CategoriesDisplay({ categoriesArray = [], handleCategorySelect, selectedCategory }) {
   const swiperRef = useRef(null);
@@ -29,8 +33,13 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
 
   function handleSlideChange(swiper) {
     setCurrentIndex(swiper.activeIndex);
+    if(!isLarge){
+      const currentCategory = categoriesArray[swiper.activeIndex]
+      handleCategorySelect(currentCategory)
+    }
+    
   }
-  const doubledCategoryArray = categoriesArray.concat(categoriesArray)
+  // const doubledCategoryArray = categoriesArray.concat(categoriesArray)
   const categoriesToDisplay = categoriesArray.map((category, index) => {
     const distanceFromCenter = Math.abs(currentIndex + 0 - index);
     const scale = 1 - 0.1 * distanceFromCenter;
@@ -83,6 +92,11 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
         <CategoryCarouselWrapper className="carousel-wrapper">
           <CategoryCarouselContainer className="carousel-container">
             <Swiper
+              modules={[Navigation]} // Include Navigation Module
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
               spaceBetween={-50}
               slidesPerView={isLarge ? 3 : 2}
               centeredSlides={true}
@@ -92,6 +106,8 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
             >
               {categoriesToDisplay}
             </Swiper>
+            <NavButton className="swiper-button-prev"></NavButton>
+            <NavButton className="swiper-button-next"></NavButton>
           </CategoryCarouselContainer>
         </CategoryCarouselWrapper>
       </CategoryDisplayContainer>

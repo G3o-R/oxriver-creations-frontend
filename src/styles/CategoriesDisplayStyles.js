@@ -114,3 +114,17 @@ export const CategoryCarouselContainer = styled.div`
     align-items: center;
   }
 `;
+
+export const NavButton = styled.button`
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 50px;
+  width: 50px;
+  &::after{
+    color: #c2c2c2;
+    font-size: 28px;
+    font-weight: 700;
+  }
+`;

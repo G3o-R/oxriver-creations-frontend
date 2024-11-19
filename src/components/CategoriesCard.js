@@ -20,9 +20,9 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function CategoriesCard({
   categoryData,
-  type = "",
   index,
-  currentIndex
+  currentIndex,
+  type = "",
 }) {
   const { cover_photo, name, sub_categories } = categoryData;
   const [isActive, setIsActive] = useState(false);
