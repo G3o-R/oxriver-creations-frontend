@@ -105,9 +105,9 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
               onSlideChange={handleSlideChange}
             >
               {categoriesToDisplay}
-            </Swiper>
             <NavButton className="swiper-button-prev"></NavButton>
             <NavButton className="swiper-button-next"></NavButton>
+            </Swiper>
           </CategoryCarouselContainer>
         </CategoryCarouselWrapper>
       </CategoryDisplayContainer>

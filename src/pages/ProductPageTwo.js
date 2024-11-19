@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import CategoriesDisplay from "../components/CategoriesDisplay";
-import { ProductsPage } from "../styles/pageStyles/ProductPageTwoStyles";
+import { 
+  ProductsPage,
+  HeaderContainer,
+  HeaderWrapper
+} from "../styles/pageStyles/ProductPageTwoStyles";
 import ProductsSection from "../components/ProductsSection";
 
 export default function ProductPageTwo({ categoriesArray }) {
@@ -11,21 +15,13 @@ export default function ProductPageTwo({ categoriesArray }) {
     sub_categories: [],
   });
 
-  const [subCategoryID, setSubCategoryID] = useState(0);
-  const [containerHeight, setContainerHeight] = useState(0);
-
   function handleCategorySelect(categoryObj) {
     setSelectedCategory(categoryObj);
   }
 
-  function handleProductSelect(selectedsubCategoryID) {
-    setSubCategoryID(selectedsubCategoryID);
-  }
-
   useEffect(() => {
     if (categoriesArray) {
-      setSelectedCategory(categoriesArray[0]);
-      setSubCategoryID(categoriesArray[0].sub_categories[0].id);
+      setSelectedCategory(categoriesArray[1]);
     }
   }, []);
 
@@ -38,7 +34,14 @@ export default function ProductPageTwo({ categoriesArray }) {
       />
 
       {selectedCategory.id && (
-        <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
+        <>
+          <HeaderWrapper>
+            <HeaderContainer>
+              <h1>{selectedCategory.name}</h1>
+            </HeaderContainer>
+          </HeaderWrapper>
+          <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
+        </>
       )}
     </ProductsPage>
   );

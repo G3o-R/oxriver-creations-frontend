@@ -1,7 +1,7 @@
-import { DynamicContainer, ProductSliderContainer, SubCategoryHeader, SubCategorySection, SubSectionWrapper } from "../styles/ProductSectionStyles";
+import { DynamicContainer, HeaderContainer, HeaderWrapper, ProductSliderContainer, SubCategoryHeader, SubCategorySection, SubSectionWrapper } from "../styles/ProductSectionStyles";
 import ProductsSlider from "./ProductsSlider";
 
-export default function ProductsSection({ subCategoriesArr = [] }) {
+export default function ProductsSection({ subCategoriesArr}) {
   
   const subCategoriesToDisplay = subCategoriesArr.map((subCategory) => {
     let arr = [];
@@ -20,12 +20,15 @@ export default function ProductsSection({ subCategoriesArr = [] }) {
     if (productPair.length > 0) {
       arr.push(productPair);
     }
+
     return (
       <SubSectionWrapper key={subCategory.id} className="subsection-container">
         <SubCategorySection>
-          <SubCategoryHeader>
-            <h1>Name Here</h1>
-          </SubCategoryHeader>
+          <HeaderWrapper className="header-wrapper">
+            <HeaderContainer className="header-container">
+              <h1>{subCategory.name}</h1>
+            </HeaderContainer>
+          </HeaderWrapper>
           <ProductSliderContainer>
             <ProductsSlider pairedProductsArray={arr}/>
           </ProductSliderContainer>
@@ -35,7 +38,7 @@ export default function ProductsSection({ subCategoriesArr = [] }) {
   })
 
   return (
-  <DynamicContainer>
+  <DynamicContainer className="dynamic-container">
     {subCategoriesToDisplay}
   </DynamicContainer>
   );

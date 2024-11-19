@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
         name: "Crafts",
         sub_categories: [
           {
-            name: "crafts",
+            name: "Custom",
             id: 1,
             products_array: [
               {

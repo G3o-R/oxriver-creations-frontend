@@ -9,6 +9,7 @@ export const DynamicContainer = styled(motion.div)`
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding: 40px 0px 80px 0px;
 `;
 
 export const SubSectionWrapper = styled.div`
@@ -23,23 +24,12 @@ export const SubCategorySection = styled.section`
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  padding: 20px;
   transition: transform 0.3s ease;
-`;
-
-export const SubCategoryHeader = styled.div`
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #ececec;
-
-  h1 {
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 600;
-    margin: 0;
+  @media screen and (min-width: 1024px){
+    padding: 40px;    
   }
 `;
+
 
 export const ProductSliderContainer = styled.div`
   margin-top: 15px;
@@ -48,5 +38,20 @@ export const ProductSliderContainer = styled.div`
   align-items: center;
   overflow: hidden;
   border-radius: 6px;
-  padding: 10px;
+  @media screen and (min-width: 1024px){
+    padding: 10px;
+  }
+`;
+
+export const HeaderWrapper = styled.div`
+  text-align: left;
+  padding: 0 20px;
+`;
+
+export const HeaderContainer = styled.div`
+
+h1{
+  font-size: 2rem;
+  color: #fff;
+}
 `;

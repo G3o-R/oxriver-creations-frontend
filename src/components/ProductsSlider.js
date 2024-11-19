@@ -41,11 +41,6 @@ export default function ProductsSlider({ pairedProductsArray, settings, title = 
   return (
     <Wrapper>
       <Container>
-        <HeaderWrapper>
-          <HeaderContainer>
-            <h1>{title}</h1>
-          </HeaderContainer>
-        </HeaderWrapper>
         <SliderWrapper>
           <SliderContainer id="slider-container">
             <Swiper
