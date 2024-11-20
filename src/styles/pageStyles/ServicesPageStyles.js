@@ -155,8 +155,7 @@ export const MethodsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     h3::before {
-      content: "";
-      margin: 0px 20px;
+      display: none;
     }
   }
 
