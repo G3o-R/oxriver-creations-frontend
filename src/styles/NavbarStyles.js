@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { CiMenuBurger } from "react-icons/ci";
 
-// Navbar container
+
 export const NavbarContainer = styled.div`
   position: fixed;
   left: 0;
@@ -17,28 +17,32 @@ export const NavbarContainer = styled.div`
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
+  /* &.--transparent{
+    background-color:  transparent;
+    box-shadow: none;
+  } */
+  
   &.--hidden {
     transform: translateY(-100%);
   }
 
-  @media screen and (max-width: 768px) {
-    height: auto;
-    flex-direction: column;
+  @media screen and (max-width: 450px) {
+    justify-content: center;
     padding: 0;
+    background-position: center;
   }
 `;
 
-// Logo wrapper
 export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 120px;
-  /* width: 100%; */
 `;
 
 export const LogoContainer = styled.div`
   height: 100%;
+  object-fit: contain;
   max-width: 400px;
   display: flex;
   align-items: center;
@@ -62,17 +66,17 @@ export const Logo = styled.img`
   }
 `;
 
-// Navigation links for large screens
-export const NavLinks = styled.ul`
+export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
   flex-direction: row;
-  padding: 0;
+  padding-bottom: 5px;
 
   button,
   a {
+    padding: 0;
     font-family: Sanchez, serif;
     font-size: 16px;
     font-weight: 500;
@@ -80,12 +84,24 @@ export const NavLinks = styled.ul`
     cursor: pointer;
   }
 
+  button {
+    font-weight: 500;
+  }
+
   @media screen and (max-width: 768px) {
-    display: none;
+    width: auto;
+  }
+
+  @media screen and (max-width: 450px) {
+    background-color: #303030;
+    padding: 5px 15px;
+    margin-left: 5px;
+    border-radius: 24px;
+    width: 70%;
+    justify-content: space-around;
+    gap: 10px;
   }
 `;
-
-export const NavLinkWrapper = styled.li``;
 
 export const NavLink = styled(Link)`
   color: white;
@@ -113,61 +129,11 @@ export const NavLink = styled(Link)`
   }
 
   &:hover {
+    /* color: #f5a623; */
     color: #f7f7f7;
   }
 
   @media screen and (max-width: 450px) {
     font-size: 14px;
-  }
-`;
-
-// Dropdown menu for smaller screens
-export const MobileNavLinks = styled.div`
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background-color: #000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 1rem 0;
-    z-index: 9;
-  }
-`;
-
-export const DropdownMenu = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin: 0;
-    padding: 1rem;
-    text-align: center;
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-    }
-
-    &:hover {
-      background-color: #222;
-    }
-  }
-`;
-
-// Burger icon for mobile toggle
-export const MenuDrop = styled(CiMenuBurger)`
-  display: none;
-  fill: #fefefe;
-  font-size: 2rem;
-  cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    display: block;
   }
 `;

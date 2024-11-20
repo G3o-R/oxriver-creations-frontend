@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Navbar from './Navbar';
+import NavbarTwo from './NavbarTwo';
 import Services from '../pages/Services';
 import ProductPageTwo from '../pages/ProductPageTwo';
 
@@ -31,7 +32,8 @@ if (isLoading){
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarTwo />
         <Routes>
           <Route path='/' element={<Home categoriesArray={categoriesArray} bestSellersArray={bestSellersArray}/>} />
           <Route path="/products" element={<ProductPageTwo categoriesArray={categoriesArray} />} />
