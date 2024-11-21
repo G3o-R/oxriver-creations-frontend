@@ -90,13 +90,13 @@ export default function NavbarTwo() {
           }`}
           >
           <LinkWrapper>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" onClick={isMobile ? () => setDropdownVisible(false) : null}>Home</NavLink>
           </LinkWrapper>
           <LinkWrapper>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/products" onClick={isMobile ? () => setDropdownVisible(false) : null}>Products</NavLink>
           </LinkWrapper>
           <LinkWrapper>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/services" onClick={isMobile ? () => setDropdownVisible(false) : null}>Services</NavLink>
           </LinkWrapper>
         </NavLinks>
       </motion.nav>
