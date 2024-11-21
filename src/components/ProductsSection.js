@@ -1,4 +1,11 @@
-import { DynamicContainer, HeaderContainer, HeaderWrapper, ProductSliderContainer, SubCategoryHeader, SubCategorySection, SubSectionWrapper } from "../styles/ProductSectionStyles";
+import { 
+  DynamicContainer,
+  HeaderContainer, 
+  HeaderWrapper, 
+  ProductSliderContainer, 
+  SubCategorySection, 
+  SubSectionWrapper
+ } from "../styles/ProductSectionStyles";
 import ProductsSlider from "./ProductsSlider";
 
 export default function ProductsSection({ subCategoriesArr}) {

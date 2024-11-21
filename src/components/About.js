@@ -7,7 +7,7 @@ import {
 } from "../styles/AboutStyles";
 import { useRef,useState } from "react";
 import { AboutCrafts, AboutPrints } from "./AboutCards";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 
 
@@ -46,12 +46,10 @@ export default function About(){
             onSlideChange={handleSlideChange}
           >
             <SwiperSlide>
-              {" "}
-              <AboutCrafts />{" "}
+              <AboutCrafts />
             </SwiperSlide>
             <SwiperSlide>
-              {" "}
-              <AboutPrints />{" "}
+              <AboutPrints />
             </SwiperSlide>
           </Swiper>
           <NavWrapper>

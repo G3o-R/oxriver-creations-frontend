@@ -17,7 +17,8 @@ export const SubSectionWrapper = styled.div`
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* padding-bottom: 15px;
+  border-bottom: 1px solid #222222; */
 `;
 
 export const SubCategorySection = styled.section`

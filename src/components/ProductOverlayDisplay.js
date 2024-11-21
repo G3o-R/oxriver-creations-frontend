@@ -44,10 +44,10 @@ export default function ProductOverlayDisplay({
     }
   }
 
-  console.log(productData);
+  // I'll add actual keys/id's when I get real content
   const imagesToDisplay = photo_array.map((photo, index) => (
-    <SwiperSlide>
-      <ImageWrapper key={index}>
+    <SwiperSlide key={index}>
+      <ImageWrapper>
         <ImageContainer>
           <img src={photo} alt="product image" />
         </ImageContainer>

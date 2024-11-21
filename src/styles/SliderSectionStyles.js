@@ -26,6 +26,7 @@ export const HeaderContainer = styled.div`
         font-size: 2rem;
         text-decoration: underline;
         margin-bottom: 20px;
+        padding-left: 15px;
     }
 `;
 

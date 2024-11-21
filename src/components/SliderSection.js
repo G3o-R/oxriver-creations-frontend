@@ -64,8 +64,6 @@ export default function SliderSection({productsArray, title, settings = {}}){
         }
     }
     
-    
-    // have to add an ID to the objects for the keys
     const productsToDisplay = productsArray.map((product, index) => (
         <SwiperSlide key={index}>
     {type === "BestSellers" ? (
