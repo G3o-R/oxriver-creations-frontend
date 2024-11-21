@@ -8,22 +8,18 @@ import {
   LogoWrapper,
   LogoContainer,
   Logo,
-  StyledNav,
 } from "../styles/NavbarTwoStyles";
+import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 export default function NavbarTwo() {
-  const [effect, setEffect] = useState("--visible");
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const navigate = useNavigate();
   const navRef = useRef(null);
 
-  // Close dropdown if clicked outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (
@@ -41,34 +37,12 @@ export default function NavbarTwo() {
     };
   }, [isDropdownVisible]);
 
-  // Handle scroll effect
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      if (lastScrollY > window.scrollY || window.scrollY < 100) {
-        setEffect("--visible");
-      }
-      if (lastScrollY > window.scrollY && window.scrollY < 400) {
-        setEffect("--transparent");
-      } else if (lastScrollY < window.scrollY && window.scrollY > 100) {
-        setEffect("--hidden");
-      }
-      lastScrollY = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
 
   return (
-    <Header className={`header ${effect}`} ref={navRef}>
+    <Header ref={navRef}>
       <StyledSection className="left-side">
         <LogoWrapper>
           <LogoContainer>
@@ -81,12 +55,24 @@ export default function NavbarTwo() {
         </LogoWrapper>
         <MenuDrop onClick={toggleDropdown} />
       </StyledSection>
-      <StyledNav>
+      <motion.nav
+        className="nav"
+        initial={{ height: 0 }}
+        animate={{ height: isDropdownVisible ? "auto" : 0 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        style={{
+          overflow: "hidden",
+          position: "absolute",
+          top: "120px",
+          left: 0,
+          right: 0,
+        }}
+      >
         <NavLinks
           className={`nav-links ${isMobile ? "mobile" : ""} ${
             isMobile && isDropdownVisible ? "active" : ""
           }`}
-        >
+          >
           <LinkWrapper>
             <NavLink to="/">Home</NavLink>
           </LinkWrapper>
@@ -97,7 +83,7 @@ export default function NavbarTwo() {
             <NavLink to="/services">Services</NavLink>
           </LinkWrapper>
         </NavLinks>
-      </StyledNav>
+      </motion.nav>
     </Header>
   );
 }

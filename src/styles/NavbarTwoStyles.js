@@ -25,6 +25,7 @@ export const Header = styled.header`
   @media screen and (max-width: 768px) {
     justify-content: center;
     padding: 0;
+    /* flex-direction:column; */
     background-position: center;
   }
 `;
@@ -83,41 +84,21 @@ export const MenuDrop = styled(CiMenuBurger)`
   }
 `;
 
-export const StyledNav = styled.nav`
-
-`;
-
 export const NavLinks = styled.ul`
-  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &.mobile {
-    display: none;
-    position: absolute;
-    top: 120px;
-    right: 0;
-    left: 0;
-    flex-direction: column;
-    align-items: center;
-    /* height: 100%; */
-    overflow: hidden;
     background-color: #000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    gap: 0px;
-    transform: translateY(-20%);
-    opacity: 0;
-    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
   }
   
-  &.active {
-    height: 232px;
-    display: flex;
-    transform: translateY(0);
-    opacity: 1;
+  &.mobile.active {
     visibility: visible;
   }
 
@@ -182,3 +163,5 @@ export const NavLink = styled(Link)`
   }
 
 `;
+
+
