@@ -16,6 +16,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function NavbarTwo() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [effect, setEffect] = useState("--visible");
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const navigate = useNavigate();
   const navRef = useRef(null);
@@ -31,6 +32,21 @@ export default function NavbarTwo() {
       }
     };
 
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+      if (lastScrollY > window.scrollY || window.scrollY < 100) {
+        setEffect("--visible");
+      }
+        if(lastScrollY > window.scrollY && window.scrollY < 400){
+            setEffect("--transparent")
+        }
+      else if (lastScrollY < window.scrollY && window.scrollY > 100) {
+        setEffect("--hidden");
+        setDropdownVisible(false)
+      }
+      lastScrollY = window.scrollY;
+    });
+
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
@@ -42,7 +58,7 @@ export default function NavbarTwo() {
   };
 
   return (
-    <Header ref={navRef}>
+    <Header ref={navRef} className={effect}>
       <StyledSection className="left-side">
         <LogoWrapper>
           <LogoContainer>
