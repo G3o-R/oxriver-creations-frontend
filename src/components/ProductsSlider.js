@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import ProductCard from "./ProductCard";
-import ProductOverlayDisplay from "./ProductOverlayDisplay";
 import "swiper/css";
 import {
   HeaderContainer,
@@ -34,9 +33,10 @@ export default function ProductsSlider({ pairedProductsArray, settings, title = 
 
   const productsToDisplay = pairedProductsArray.map((productPair, index) => (
     <SwiperSlide key={index}>
-        <ProductCard productPairData={productPair}  />
+        <ProductCard productPairData={productPair} />
     </SwiperSlide>
-  ))
+  ));
+  
 
   return (
     <Wrapper>

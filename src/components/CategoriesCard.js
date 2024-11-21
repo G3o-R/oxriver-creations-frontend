@@ -39,7 +39,7 @@ export default function CategoriesCard({
       <CardContainer>
         <ImageWrapper>
           <ImageContainer>
-            <img src={cover_photo} alt="Product Image" />
+            <img src={cover_photo} alt="Product Image" loading="lazy"/>
           </ImageContainer>
         </ImageWrapper>
         <OverlayWrapper
