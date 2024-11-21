@@ -74,15 +74,15 @@ export default function NavbarTwo() {
       <motion.nav
         className="nav"
         initial={{ height: 0 }}
-        animate={{ height: isDropdownVisible ? "auto" : 0 }}
+        animate={{ height: isDropdownVisible && isMobile ? "auto" : 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        style={{
+        style={isMobile ? {
           overflow: "hidden",
           position: "absolute",
           top: "120px",
           left: 0,
           right: 0,
-        }}
+        } : {}}
       >
         <NavLinks
           className={`nav-links ${isMobile ? "mobile" : ""} ${
