@@ -65,21 +65,21 @@ export default function NavbarTwo() {
   return (
     <Header ref={navRef} className={effect}>
       <StyledSection className="left-side">
-        <LogoWrapper>
-          <LogoContainer>
+        <LogoWrapper className="logo-wrapper">
+          <LogoContainer className="logo-container">
             <ORCLogo className="logo" />
             <OxRiverCreactions className="OxRiver-creations" />
             <ORCLogo className="logo" />
           </LogoContainer>
         </LogoWrapper>
       </StyledSection>
-      <NavContainer isMobile={isMobile} className="nav-container">
+      <NavContainer ismobile={isMobile ? "true" : "false"} className="nav-container">
         <MotionNav
           className="nav"
           initial={{ height: 0 }}
           animate={{ height: isDropdownVisible && isMobile ? "auto" : 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          isMobile={isMobile}
+          ismobile={isMobile ? "true" : "false"}
         >
           <NavLinks
             className={`nav-links ${isMobile ? "mobile" : ""} ${

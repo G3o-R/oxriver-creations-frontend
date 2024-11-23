@@ -17,6 +17,7 @@ import {
   TitleWrapper,
 } from "../styles/CategoriesCardStyles";
 import { useMediaQuery } from 'react-responsive'
+import { useNavigate } from "react-router-dom";
 
 export default function CategoriesCard({
   categoryData,
@@ -24,16 +25,24 @@ export default function CategoriesCard({
   currentIndex,
   type = "",
 }) {
-  const { cover_photo, name, sub_categories } = categoryData;
+  const { cover_photo, name} = categoryData;
   const [isActive, setIsActive] = useState(false);
+  const navigate = useNavigate()
   const isLarge = useMediaQuery({
     query: '(max-width: 860px)'
   })
+
+  function OnCardClick(){
+    let name = categoryData.name;
+    let categoryRoute = name.split(" ").join("-")
+    navigate(`${categoryRoute}`)
+  }
 
   return (
     <CardWrapper
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
+      onClick={OnCardClick}
       className={type}
     >
       <CardContainer>
@@ -50,23 +59,11 @@ export default function CategoriesCard({
           }
         >
           <OverlayContainer>
-            <TitleWrapper onClick={() => console.log("go to product page")}>
+            <TitleWrapper>
               <TitleContainer>
                 <CategoryTitle>{name}</CategoryTitle>
               </TitleContainer>
             </TitleWrapper>
-            {/* having subcategories messes this up a bit */}
-            {/* <MenuWrapper>
-                            <MenuContainer>
-                                {sub_categories.map((productOption) => 
-                                    (<MenuOption
-                                     onClick={()=>console.log("go to selected product")} 
-                                     key={productOption.id}>
-                                        <img src={productOption.cover_photo}/>
-                                        <OptionOverlay></OptionOverlay>
-                                    </MenuOption>)).slice(0,4)}
-                            </MenuContainer>
-                        </MenuWrapper> */}
           </OverlayContainer>
         </OverlayWrapper>
       </CardContainer>

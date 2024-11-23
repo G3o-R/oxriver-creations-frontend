@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import NavbarTwo from './NavbarTwo';
 import Services from '../pages/Services';
 import ProductPageTwo from '../pages/ProductPageTwo';
+import CategoryPage from '../pages/CategoryPage';
 
 function App() {
   const [categoriesArray, setCategoriesArray] = useState([])
@@ -13,7 +14,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // fetch("http://localhost:3001/resources")
     fetch("/.netlify/functions/getResources")
         .then((res) => res.json())
         .then((data) => {
@@ -32,11 +32,12 @@ if (isLoading){
   return (
     <div className="App">
       <BrowserRouter>
-      {/* <Navbar /> */}
       <NavbarTwo />
         <Routes>
           <Route path='/' element={<Home categoriesArray={categoriesArray} bestSellersArray={bestSellersArray}/>} />
-          <Route path="/products" element={<ProductPageTwo categoriesArray={categoriesArray} />} />
+          <Route path="/products" element={<ProductPageTwo categoriesArray={categoriesArray} />}>
+            <Route path=':categoryRoute' element={<CategoryPage categoriesArray={categoriesArray}/>} />
+          </Route>
           <Route path="services" element={<Services />} />
         </Routes>
       </BrowserRouter>

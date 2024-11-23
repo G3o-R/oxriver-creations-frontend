@@ -44,16 +44,16 @@ export const StyledSection = styled.section`
 `;
 
 export const NavContainer = styled.div`
-position: ${({ isMobile }) => (isMobile ? "absolute" : "static")};
-top: ${({ isMobile }) => (isMobile ? "105px" : "auto")};
+position: ${({ ismobile }) => (ismobile ? "absolute" : "static")};
+top: ${({ ismobile }) => (ismobile ? "105px" : "auto")};
 left: 0;
 right: 0;
 width: 100%;
 `;
 
 export const MotionNav = styled(motion.nav)`
-  overflow: ${({ isMobile }) => (isMobile ? "hidden" : "visible")};
-  width: ${({ isMobile }) => (isMobile ? "100%" : "auto")};
+  overflow: ${({ ismobile }) => (ismobile ? "hidden" : "visible")};
+  width: ${({ ismobile }) => (ismobile ? "100%" : "auto")};
   background-color: #000;
   display: flex;
   flex-direction: column;

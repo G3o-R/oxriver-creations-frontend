@@ -5,9 +5,12 @@ import {
   HeaderContainer,
   HeaderWrapper
 } from "../styles/pageStyles/ProductPageTwoStyles";
-import ProductsSection from "../components/ProductsSection";
+import { Outlet, useParams, useNavigate } from "react-router-dom";
+
 
 export default function ProductPageTwo({ categoriesArray }) {
+  const navigate = useNavigate()
+  const { categoryRoute } = useParams()
   const [selectedCategory, setSelectedCategory] = useState({
     id: "",
     image: "",
@@ -17,13 +20,24 @@ export default function ProductPageTwo({ categoriesArray }) {
 
   function handleCategorySelect(categoryObj) {
     setSelectedCategory(categoryObj);
+    let routeToGoTo = categoryObj.name.split((" ")).join("-")
+    navigate(routeToGoTo)
   }
 
   useEffect(() => {
-    if (categoriesArray) {
+    if (categoriesArray && !categoryRoute) {
       setSelectedCategory(categoriesArray[1]);
     }
   }, []);
+
+  useEffect(() => {
+    if(categoryRoute){
+      let categoryName = categoryRoute.split("-").join(" ")
+      let categoryToSelect = categoriesArray.find((category) => category.name ===  categoryName)
+      setSelectedCategory(categoryToSelect)
+    }
+
+  },[categoryRoute])
 
   return (
     <ProductsPage>
@@ -32,17 +46,7 @@ export default function ProductPageTwo({ categoriesArray }) {
         handleCategorySelect={handleCategorySelect}
         selectedCategory={selectedCategory}
       />
-
-      {selectedCategory.id && (
-        <>
-          <HeaderWrapper>
-            <HeaderContainer>
-              <h1>{selectedCategory.name}</h1>
-            </HeaderContainer>
-          </HeaderWrapper>
-          <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
-        </>
-      )}
+      <Outlet />
     </ProductsPage>
   );
 }

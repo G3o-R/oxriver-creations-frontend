@@ -12,7 +12,6 @@ import { useMediaQuery } from 'react-responsive'
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import CategoriesCard from "./CategoriesCard";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -33,13 +32,7 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
 
   function handleSlideChange(swiper) {
     setCurrentIndex(swiper.activeIndex);
-    if(!isLarge){
-      const currentCategory = categoriesArray[swiper.activeIndex]
-      handleCategorySelect(currentCategory)
-    }
-    
   }
-  // const doubledCategoryArray = categoriesArray.concat(categoriesArray)
   const categoriesToDisplay = categoriesArray.map((category, index) => {
     const distanceFromCenter = Math.abs(currentIndex + 0 - index);
     const scale = 1 - 0.1 * distanceFromCenter;
