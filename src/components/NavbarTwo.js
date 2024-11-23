@@ -73,13 +73,12 @@ export default function NavbarTwo() {
           </LogoContainer>
         </LogoWrapper>
       </StyledSection>
-      <NavContainer ismobile={isMobile ? "true" : "false"} className="nav-container">
+      <NavContainer className="nav-container">
         <MotionNav
           className="nav"
           initial={{ height: 0 }}
           animate={{ height: isDropdownVisible && isMobile ? "auto" : 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          ismobile={isMobile ? "true" : "false"}
         >
           <NavLinks
             className={`nav-links ${isMobile ? "mobile" : ""} ${

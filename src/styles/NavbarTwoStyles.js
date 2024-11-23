@@ -44,24 +44,30 @@ export const StyledSection = styled.section`
 `;
 
 export const NavContainer = styled.div`
-position: ${({ ismobile }) => (ismobile ? "absolute" : "static")};
-top: ${({ ismobile }) => (ismobile ? "105px" : "auto")};
+position: static;
+top: auto;
 left: 0;
 right: 0;
 width: 100%;
+
+@media screen and (max-width: 768px){
+  position: absolute;
+  top: 105px;
+}
 `;
 
 export const MotionNav = styled(motion.nav)`
-  overflow: ${({ ismobile }) => (ismobile ? "hidden" : "visible")};
-  width: ${({ ismobile }) => (ismobile ? "100%" : "auto")};
+  overflow: "visible";
+  width: auto;
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
+    overflow: hidden;
   }
 `;
 
