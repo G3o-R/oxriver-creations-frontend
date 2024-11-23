@@ -8,11 +8,17 @@ import {
   LogoWrapper,
   LogoContainer,
   Logo,
+  MotionNav,
+  NavContainer,
+  MenuWrapper,
 } from "../styles/NavbarTwoStyles";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+
+import { ReactComponent as OxRiverCreactions } from "../images/ORC.svg";
+import { ReactComponent as ORCLogo } from "../images/ORLogo.svg";
 
 export default function NavbarTwo() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -37,12 +43,11 @@ export default function NavbarTwo() {
       if (lastScrollY > window.scrollY || window.scrollY < 100) {
         setEffect("--visible");
       }
-        if(lastScrollY > window.scrollY && window.scrollY < 400){
-            setEffect("--transparent")
-        }
-      else if (lastScrollY < window.scrollY && window.scrollY > 100) {
+      if (lastScrollY > window.scrollY && window.scrollY < 400) {
+        setEffect("--transparent");
+      } else if (lastScrollY < window.scrollY && window.scrollY > 100) {
         setEffect("--hidden");
-        setDropdownVisible(false)
+        setDropdownVisible(false);
       }
       lastScrollY = window.scrollY;
     });
@@ -62,44 +67,55 @@ export default function NavbarTwo() {
       <StyledSection className="left-side">
         <LogoWrapper>
           <LogoContainer>
-            <Logo
-              src="/OxRiverLogo.3.png"
-              alt="OxRiver Logo"
-              onClick={() => navigate("/")}
-            />
+            <ORCLogo className="logo" />
+            <OxRiverCreactions className="OxRiver-creations" />
+            <ORCLogo className="logo" />
           </LogoContainer>
         </LogoWrapper>
-        <MenuDrop onClick={toggleDropdown} />
       </StyledSection>
-      <motion.nav
-        className="nav"
-        initial={{ height: 0 }}
-        animate={{ height: isDropdownVisible && isMobile ? "auto" : 0 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        style={isMobile ? {
-          overflow: "hidden",
-          position: "absolute",
-          top: "120px",
-          left: 0,
-          right: 0,
-        } : {}}
-      >
-        <NavLinks
-          className={`nav-links ${isMobile ? "mobile" : ""} ${
-            isMobile && isDropdownVisible ? "active" : ""
-          }`}
+      <NavContainer isMobile={isMobile} className="nav-container">
+        <MotionNav
+          className="nav"
+          initial={{ height: 0 }}
+          animate={{ height: isDropdownVisible && isMobile ? "auto" : 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          isMobile={isMobile}
+        >
+          <NavLinks
+            className={`nav-links ${isMobile ? "mobile" : ""} ${
+              isMobile && isDropdownVisible ? "active" : ""
+            }`}
           >
-          <LinkWrapper>
-            <NavLink to="/" onClick={isMobile ? () => setDropdownVisible(false) : null}>Home</NavLink>
-          </LinkWrapper>
-          <LinkWrapper>
-            <NavLink to="/products" onClick={isMobile ? () => setDropdownVisible(false) : null}>Products</NavLink>
-          </LinkWrapper>
-          <LinkWrapper>
-            <NavLink to="/services" onClick={isMobile ? () => setDropdownVisible(false) : null}>Services</NavLink>
-          </LinkWrapper>
-        </NavLinks>
-      </motion.nav>
+            <LinkWrapper>
+              <NavLink
+                to="/"
+                onClick={isMobile ? () => setDropdownVisible(false) : null}
+              >
+                Home
+              </NavLink>
+            </LinkWrapper>
+            <LinkWrapper>
+              <NavLink
+                to="/products"
+                onClick={isMobile ? () => setDropdownVisible(false) : null}
+              >
+                Products
+              </NavLink>
+            </LinkWrapper>
+            <LinkWrapper>
+              <NavLink
+                to="/services"
+                onClick={isMobile ? () => setDropdownVisible(false) : null}
+              >
+                Services
+              </NavLink>
+            </LinkWrapper>
+          </NavLinks>
+        </MotionNav>
+        <MenuWrapper>
+          <MenuDrop onClick={toggleDropdown} className={isDropdownVisible ? "active" : "inactive"}/>
+        </MenuWrapper>
+      </NavContainer>
     </Header>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import OxRiverLogo from "../images/OxRiverLogo.3.png";
 import { Link } from "react-router-dom";
 import { CiMenuBurger } from "react-icons/ci";
+import { motion } from "framer-motion";
 
 export const Header = styled.header`
   position: fixed;
@@ -9,24 +9,23 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   display: flex;
-  gap: 30px;
+  flex-direction:column;
   align-items: center;
   width: 100%;
   background-color: #000;
-  height: 120px;
-  padding: 0 2rem;
+  height: 105px;
+  padding: 0;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
   
   &.--hidden {
-    transform: translateY(-100%);
+    transform: translateY(-120%);
   }
 
   @media screen and (max-width: 768px) {
     justify-content: center;
     padding: 0;
-    /* flex-direction:column; */
-    background-position: center;
   }
 `;
 
@@ -39,24 +38,56 @@ export const StyledSection = styled.section`
   @media screen and (max-width: 768px){
     max-width:85%;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
 `;
 
-export const LogoWrapper = styled.div`
+export const NavContainer = styled.div`
+position: ${({ isMobile }) => (isMobile ? "absolute" : "static")};
+top: ${({ isMobile }) => (isMobile ? "105px" : "auto")};
+left: 0;
+right: 0;
+width: 100%;
+`;
+
+export const MotionNav = styled(motion.nav)`
+  overflow: ${({ isMobile }) => (isMobile ? "hidden" : "visible")};
+  width: ${({ isMobile }) => (isMobile ? "100%" : "auto")};
+  background-color: #000;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+`;
+
+
+export const LogoWrapper = styled.div`
   max-height: 120px;
 `;
 
 export const LogoContainer = styled.div`
   height: 100%;
   object-fit: contain;
-  max-width: 400px;
+  max-width: 100vw;
   display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  svg{
+    &.OxRiver-creations{
+      height: 80px;
+    }
+    &.logo{
+      height: 80px;
+    }
+
+  }
 `;
 
 export const Logo = styled.img`
@@ -65,33 +96,58 @@ export const Logo = styled.img`
   object-fit: contain;
 `;
 
-export const MenuDrop = styled(CiMenuBurger)`
+export const MenuWrapper = styled.div`
+  width: 100%;
   display: none;
+  justify-content: center;
+  background-color: #080808;
+  border-radius: 0px 0px 10px 10px;
+  height: 20px;
+  @media screen and (max-width: 768px){
+      display: flex;
+  }
+`
+
+export const MenuDrop = styled(CiMenuBurger)`
+  height: 100%;
   color: #fefefe;
   font-size: 2rem;
   cursor: pointer;
   stroke-width: 1;
   transition: stroke-width 0.3s ease-in-out, color 0.3s ease-in-out;
 
-  &:hover{
+  &:hover {
     color: #fff;
     stroke-width: 2;
   }
 
   @media screen and (max-width: 768px) {
     display: block;
-    padding: 0 20px;
+    padding: 10px;
+    align-self: center;
   }
 `;
 
 export const NavLinks = styled.ul`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+width: 100%;
+background-color: #000;
+box-shadow: none;
+padding: 10px 0px;
+
+@media screen and (max-width: 768px) {
   list-style: none;
-  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding: 0;
+  gap: 0px;
+  
   &.mobile {
     background-color: #000;
     overflow: hidden;
@@ -101,17 +157,8 @@ export const NavLinks = styled.ul`
   &.mobile.active {
     visibility: visible;
   }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    gap: 20px;
-    background-color: transparent;
-    box-shadow: none;
-  }
+}
 `;
-
 
 export const LinkWrapper = styled.div`
   @media screen and (max-width: 768px){
