@@ -35,7 +35,7 @@ export default function CategoriesCard({
   function OnCardClick(){
     let name = categoryData.name;
     let categoryRoute = name.split(" ").join("-")
-    navigate(`${categoryRoute}`)
+    navigate(`/products/${categoryRoute}`)
   }
 
   return (

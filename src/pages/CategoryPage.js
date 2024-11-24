@@ -13,10 +13,8 @@ export default function CategoryPage({ categoriesArray }) {
   const selectedCategory = categoriesArray.find(
     (category) => category.name === categoryName
   );
-  if (!selectedCategory && categoryRoute) {
+  if (!selectedCategory && categoryRoute !== "") {
     return <div className="not-found">Category not found!</div>;
-  } else if (!categoryRoute) {
-    console.log("not category selected");
   }
 
   return (

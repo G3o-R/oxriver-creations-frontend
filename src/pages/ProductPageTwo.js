@@ -50,6 +50,8 @@ export default function ProductPageTwo({ categoriesArray }) {
         handleCategorySelect={handleCategorySelect}
         selectedCategory={selectedCategory}
       />
+{/* this is where we'll handle it */}
+      {categoryRoute ? <></> : <div>Select a Category, Find what interests you</div>}
       <Outlet />
     </ProductsPage>
   );

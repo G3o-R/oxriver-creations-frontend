@@ -2,7 +2,6 @@ import '../styles/App.css';
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
-import Navbar from './Navbar';
 import NavbarTwo from './NavbarTwo';
 import Services from '../pages/Services';
 import ProductPageTwo from '../pages/ProductPageTwo';

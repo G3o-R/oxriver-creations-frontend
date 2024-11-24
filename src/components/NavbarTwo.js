@@ -7,7 +7,6 @@ import {
   StyledSection,
   LogoWrapper,
   LogoContainer,
-  Logo,
   MotionNav,
   NavContainer,
   MenuWrapper,
@@ -95,7 +94,7 @@ export default function NavbarTwo() {
             </LinkWrapper>
             <LinkWrapper>
               <NavLink
-                to="/products"
+                to="/products/3D-Prints"
                 onClick={isMobile ? () => setDropdownVisible(false) : null}
               >
                 Products

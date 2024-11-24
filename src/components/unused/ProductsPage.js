@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import CategoriesDisplay from "../components/CategoriesDisplay";
+import CategoriesDisplay from "../CategoriesDisplay";
 // import { motion } from "framer-motion";
 import {
   DynamicContainer,
@@ -12,8 +12,8 @@ import {
   TextWrapper,
   TextContainer,
 } from "../styles/pageStyles/ProductsStyles";
-import ProductCard from "../components/ProductCard";
-import ProductsSlider from "../components/ProductsSlider";
+import ProductCard from "../ProductCard";
+import ProductsSlider from "../ProductsSlider";
 
 export default function Products({ categoriesArray }) {
   const [selectedCategory, setSelectedCategory] = useState({

@@ -74,6 +74,7 @@ export const MotionNav = styled(motion.nav)`
 
 export const LogoWrapper = styled.div`
   max-height: 120px;
+  width: 100%;
 `;
 
 export const LogoContainer = styled.div`
@@ -90,17 +91,12 @@ export const LogoContainer = styled.div`
       height: 80px;
     }
     &.logo{
-      height: 80px;
+      height: 100px;
     }
 
   }
 `;
 
-export const Logo = styled.img`
-  width: 100%;
-  height: 100px;
-  object-fit: contain;
-`;
 
 export const MenuWrapper = styled.div`
   width: 100%;
@@ -144,6 +140,7 @@ width: 100%;
 background-color: #000;
 box-shadow: none;
 padding: 10px 0px;
+margin:0;
 
 @media screen and (max-width: 768px) {
   list-style: none;
