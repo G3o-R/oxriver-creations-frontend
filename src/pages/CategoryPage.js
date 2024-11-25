@@ -4,6 +4,7 @@ import {
   HeaderContainer,
 } from "../styles/pageStyles/ProductPageTwoStyles";
 import ProductsSection from "../components/ProductsSection";
+import WebDevSection from "../components/WebDevSection";
 
 export default function CategoryPage({ categoriesArray }) {
   const { categoryRoute } = useParams();
@@ -17,6 +18,9 @@ export default function CategoryPage({ categoriesArray }) {
     return <div className="not-found">Category not found!</div>;
   }
 
+  console.log(selectedCategory)
+  const contentToDisplay = selectedCategory.name === "Web Development" ? <WebDevSection /> : <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
+
   return (
     <>
       <HeaderWrapper>
@@ -24,7 +28,8 @@ export default function CategoryPage({ categoriesArray }) {
           <h1>{selectedCategory.name}</h1>
         </HeaderContainer>
       </HeaderWrapper>
-      <ProductsSection subCategoriesArr={selectedCategory.sub_categories} />
+      {contentToDisplay}
+      {/* <ProductsSection subCategoriesArr={selectedCategory.sub_categories} /> */}
     </>
   );
 }
