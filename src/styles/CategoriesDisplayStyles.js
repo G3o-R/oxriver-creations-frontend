@@ -12,12 +12,12 @@ export const CategoryDisplayContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1860px;
   width: 100%;
   overflow: hidden;
 `;
 
 export const ImageWrapper = styled.div`
+  width: 100%;
   position: relative;
   top: 0;
   max-width: 1560px;
@@ -25,7 +25,7 @@ export const ImageWrapper = styled.div`
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 200px 200px rgb(17,17,17);
   z-index: 1;
 `;
 
@@ -74,11 +74,13 @@ export const CategoryCarouselWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   width: 100%;
-  /* padding-right: 20px; */
-  /* margin-right: 24px;  */
   padding: 0;
   z-index: 2;
-  margin-top: -250px;
+  margin-top: -275px;
+
+  @media screen and (min-width: 468px) {
+    margin-top: -250px;
+  }
 
   @media screen and (min-width: 1080px) {
     margin-top: -200px;

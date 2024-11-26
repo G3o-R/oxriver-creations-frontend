@@ -29,7 +29,7 @@ export default function CategoriesCard({
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate()
   const isLarge = useMediaQuery({
-    query: '(max-width: 860px)'
+    query: '(max-width: 650px)'
   })
 
   function OnCardClick(){

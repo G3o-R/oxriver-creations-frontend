@@ -12,7 +12,7 @@ export const Header = styled.header`
   flex-direction:column;
   align-items: center;
   width: 100%;
-  background-color: #000;
+  background-color: #090909;
   height: 105px;
   padding: 0;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -59,7 +59,7 @@ width: 100%;
 export const MotionNav = styled(motion.nav)`
   overflow: "visible";
   width: auto;
-  background-color: #000;
+  background-color: #090909;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,7 +137,7 @@ align-items: center;
 flex-direction: row;
 gap: 20px;
 width: 100%;
-background-color: #000;
+background-color: #090909;
 box-shadow: none;
 padding: 10px 0px;
 margin:0;
@@ -152,7 +152,7 @@ margin:0;
   gap: 0px;
   
   &.mobile {
-    background-color: #000;
+    background-color: #090909;
     overflow: hidden;
     width: 100%;
   }

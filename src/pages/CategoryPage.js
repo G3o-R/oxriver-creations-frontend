@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import {
   HeaderWrapper,
   HeaderContainer,
-} from "../styles/pageStyles/ProductPageTwoStyles";
+} from "../styles/pageStyles/CategoryPageStyles";
 import ProductsSection from "../components/ProductsSection";
 import WebDevSection from "../components/WebDevSection";
 
@@ -29,7 +29,6 @@ export default function CategoryPage({ categoriesArray }) {
         </HeaderContainer>
       </HeaderWrapper>
       {contentToDisplay}
-      {/* <ProductsSection subCategoriesArr={selectedCategory.sub_categories} /> */}
     </>
   );
 }

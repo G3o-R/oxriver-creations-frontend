@@ -8,15 +8,18 @@ export const ServicesPage = styled.div`
   min-height: 100vh;
   width: 100%;
   position: relative;
-
+  box-shadow: inset 0px -200px 400px -200px rgb(32,32,32, 1);
+  
+  
   h1 {
     color: white;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 20px;
   }
-
+  
   @media screen and (max-width: 768px) {
+    box-shadow: inset 0px -200px 200px -10px rgb(32,32,32, 1);
     padding-top: 10em;
     h1 {
       font-size: 2.5rem;
@@ -200,19 +203,18 @@ export const CustomWebsitesContainer = styled.div`
 
   label {
     font-size: 1.5rem;
-    color: #333;
+    color: #777;
     span {
-      /* color: #f5a623; */
       cursor: pointer;
       transition: color 0.3s;
       &:hover {
-        color: #333;
+        color: #f7f7f7;
       }
     }
   }
 
   h3 {
-    color: #333;
+    color: #777;
     font-size: 1.2rem;
     text-align: center;
   }

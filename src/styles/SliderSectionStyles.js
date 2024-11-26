@@ -27,6 +27,9 @@ export const HeaderContainer = styled.div`
         text-decoration: underline;
         margin-bottom: 20px;
         padding-left: 15px;
+        @media screen and (min-width:768px){
+          font-size: 3rem;
+        }
     }
 `;
 

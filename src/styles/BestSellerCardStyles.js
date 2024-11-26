@@ -5,11 +5,10 @@ export const Wrapper = styled.div`
     justify-content: center;
     padding: 10px;
     margin: 15px 5px;
-    /* border color */
-    background-color: #2e2e2e;
-    /* background-color: #f7f7f7; */
+    background-color: #1e1e1e;
     border-radius: 24px;
     transition: box-shadow 0.3s ease;
+
 `;
 
 export const Container = styled.div`
@@ -29,7 +28,7 @@ export const Container = styled.div`
         height: 100%;
     }
 
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1560px) {
         flex-direction: row;
         padding: 20px;
     }
@@ -41,7 +40,7 @@ export const ImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
     
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1560px) {
         width: 50%;
         height:100%;
     }
@@ -71,7 +70,7 @@ export const TextWrapper = styled.div`
     width: 100%;
     padding: 20px;
 
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1560px) {
         width: 50%;
         padding: 0px 10px 0px 20px;
     }
@@ -103,7 +102,7 @@ export const TextContainer = styled.div`
         }
     }
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1560px) {
         h1 {
         margin: 23px 10px 15px;
 

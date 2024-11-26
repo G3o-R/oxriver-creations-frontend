@@ -7,7 +7,7 @@ export const DynamicContainer = styled(motion.div)`
   align-items: center;
   gap: 30px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #080808;
   width: 100%;
   padding: 40px 0px 80px 0px;
 `;
@@ -17,8 +17,6 @@ export const SubSectionWrapper = styled.div`
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 15px;
-  border-bottom: 1px solid #222222; */
 `;
 
 export const SubCategorySection = styled.section`
@@ -26,11 +24,10 @@ export const SubCategorySection = styled.section`
   flex-direction: column;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  @media screen and (min-width: 1024px){
-    padding: 40px;    
+  @media screen and (min-width: 1024px) {
+    padding: 40px;
   }
 `;
-
 
 export const ProductSliderContainer = styled.div`
   margin-top: 15px;
@@ -39,7 +36,7 @@ export const ProductSliderContainer = styled.div`
   align-items: center;
   overflow: hidden;
   border-radius: 6px;
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     padding: 10px;
   }
 `;
@@ -50,9 +47,11 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-
-h1{
-  font-size: 2rem;
-  color: #fff;
-}
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+    @media screen and (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
 `;

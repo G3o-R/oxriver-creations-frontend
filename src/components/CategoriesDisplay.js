@@ -8,11 +8,11 @@ import {
   CategoryDisplayWrapper,
   NavButton,
 } from "../styles/CategoriesDisplayStyles";
-import { useMediaQuery } from 'react-responsive'
+import CategoriesCard from "./CategoriesCard";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import CategoriesCard from "./CategoriesCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useMediaQuery } from 'react-responsive'
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -69,8 +69,8 @@ export default function CategoriesDisplay({ categoriesArray = [], handleCategory
   });
 
   return (
-    <CategoryDisplayWrapper>
-      <CategoryDisplayContainer>
+    <CategoryDisplayWrapper className="category-display-wrapper">
+      <CategoryDisplayContainer className="category-display-container">
         <ImageWrapper>
           <ImageContainer>
             <img

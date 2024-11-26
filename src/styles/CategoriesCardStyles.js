@@ -6,17 +6,16 @@ export const CardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* max-width: 300px; */
   padding: 5px;
   margin: 5px;
   aspect-ratio: 3/5;
-  background-color: #2e2e2e;
+  background-color: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
   
   &:hover {
-    background-color: #575a65;
+    background-color: #2a2a2a;
   }
   
   &.product-page {
@@ -32,7 +31,6 @@ export const CardWrapper = styled.div`
     
     @media screen and (min-width: 1100px) {
       max-width: 425px;
-      /* aspect-ratio: 5/3; */
     }
 
     @media screen and (min-width: 1175px) {
@@ -50,10 +48,6 @@ export const CardWrapper = styled.div`
     @media screen and (min-width: 1400px) {
       max-width: 525px;
     }
-
-    /* @media screen and (min-width: 1475px) {
-      max-width: 500px;
-    } */
 
     @media screen and (min-width: 1475px) {
       max-width: 550px;
@@ -102,7 +96,6 @@ export const OverlayWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* padding: 20px; */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   &.active {
