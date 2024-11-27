@@ -1,34 +1,18 @@
-import { 
-    StyledWebDevSection,
-    Content, 
-    HeaderWrapper,
-    HeaderContainer,
-    StyleCardsWrapper,
-    StyleCardsContainer
- } from "../styles/WebDevSectionStyles";
-import StyleCard from "./StyleCard";
+import React, { useEffect, useRef } from "react";
+import NET from "vanta/dist/vanta.net.min";
+import {
+  StyledWebDevSection,
+  Content,
+} from "../styles/WebDevSectionStyles";
+import TestVanta from "./TestVanta";
 
+export default function WebDevSection() {
 
-export default function WebDevSection(){
-    
-    return(
-        <StyledWebDevSection className="web-development">
-            <Content className="content">
-                <HeaderWrapper className="header-wrapper">
-                    <HeaderContainer className="header-container">
-                        <h3>
-                            Interested in a custom website?
-                        </h3>
-                    </HeaderContainer>
-                </HeaderWrapper>
-                <StyleCardsWrapper>
-                    <StyleCardsContainer>
-                        <StyleCard text="Give it" keyword="Depth"/>
-                        <StyleCard text="Make it" keyword="Pop"/>
-                        <StyleCard text="Give it" keyword="Life"/>
-                    </StyleCardsContainer>
-                </StyleCardsWrapper>
-            </Content>
-        </StyledWebDevSection>
-    )
+  return (
+    <StyledWebDevSection className="web-development">
+      <Content className="content">
+        <TestVanta />
+      </Content>
+    </StyledWebDevSection>
+  );
 }

@@ -9,12 +9,13 @@ export const StyledWebDevSection = styled.section`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 8.5rem;
-    max-width: 1080px;
+    height: 600px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px;
+    background-color: #222222;
+    padding: 20px 0px;
+    overflow: hidden;
 
 `;
 
@@ -49,3 +50,9 @@ export const StyleCardsContainer = styled.div`
     justify-content: space-between;
 `;
 
+export const BackgroundTemp = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+`;
